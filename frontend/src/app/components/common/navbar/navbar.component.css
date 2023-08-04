@@ -1,0 +1,9 @@
+.navbar {
+  height: 3.2rem;
+  background-color: blueviolet;
+  text-align: center;
+}
+.navbar p {
+    padding: 1rem;
+    color: white;
+}
