@@ -31,6 +31,11 @@ import { UpperLeftSideComponent } from './components/product-detail/upper-left-s
 import { YouNeedToKnowComponent } from './components/product-detail/you-need-to-know/you-need-to-know.component';
 import { SearchInputComponent } from './components/home-page/search-input/search-input.component';
 import { ButtonModule } from 'primeng/button';
+import { ServiceBoxComponent } from './components/partials/service-box/service-box.component';
+import { RatingModule } from 'primeng/rating';
+import { CardModule } from 'primeng/card';
+
+
 
 @NgModule({
   declarations: [
@@ -61,13 +66,16 @@ import { ButtonModule } from 'primeng/button';
     UpperLeftSideComponent,
     YouNeedToKnowComponent,
     SearchInputComponent,
+    ServiceBoxComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ButtonModule,
+    RatingModule,
     BrowserAnimationsModule,
+    CardModule
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -1,0 +1,17 @@
+<div class="box">
+  <img [src]="imageUrl" [alt]="title" />
+  <div class="upper-side">
+    <div class="location-info">
+      <i></i>
+      <span>{{location}}</span>
+    </div>
+    <div class="stars">
+      <i></i>
+      <span>{{stars}}</span>
+    </div>
+  </div>
+  <div class="title">{{title}} </div>
+  <div class="price">
+    {{ price | currency }}
+  </div>
+</div>

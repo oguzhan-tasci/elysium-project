@@ -1,3 +1,28 @@
-<div class="container cities">
-  <p>FAMOUS CITIES WILL BE HERE</p>
+<div class="container famous-cities">
+  <p class="text-2xl font-semibold text-start">Featured citiess</p>
+  <ul class="flex justify-content-start p-0 w-full ">
+    <li
+      class="flex flex-column w-3 p-3 mx-2 border-round-2xl my-4 bg-white-alpha-60 shadow-2"
+      *ngFor="let cities of famousCities; let even = even; let odd = odd"
+      [ngClass]="{ odd: odd, even: even }"
+    >
+      <img
+        class="w-full border-round-2xl h-16rem"
+        [src]="cities.image"
+        [alt]="cities.name"
+      />
+      <div class="flex justify-content-between mt-3 px-1">
+        <div class="">
+          <span class="font-bold text-sm">{{ cities.name }}</span>
+        </div>
+        <div class="stars">
+          <i class="pi pi-star text-xs"></i>
+          <span class="mx-1 text-xs">{{ cities.quantity }}</span>
+        </div>
+      </div>
+      <div class="text-sm text-gray-700 px-1 my-1">
+        {{ cities.information }}
+      </div>
+    </li>
+  </ul>
 </div>

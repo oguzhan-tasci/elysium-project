@@ -1,6 +1,17 @@
-.information {
-    background-color: paleturquoise;
+.odd {
+    
+    flex-flow: row-reverse;
+    padding: 0 2rem;
 }
-p {
-    text-align: center;
+/* .even::after {
+    content : "||||";
+    color: black;
+}
+.odd::after {
+    content : "||||";
+    color: black;
+} */
+
+.odd:hover,.even:hover {
+    background-color: #f6f6f6;
 }
