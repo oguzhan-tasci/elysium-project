@@ -1,3 +1,14 @@
-<div class="container results">
-    <p>Results for will be here</p>
+<div class="flex flex-column container-only-max-width mt-3 p-2">
+  <div class="flex align-items-center">
+    <p class="text-gray-800 text-2xl font-semibold mx-1">Results for :</p>
+    <span class="mx-1 text-2xl font-bold">"Hair Trasplant",</span>
+    <span class="mx-1 text-2xl font-bold">"Istanbul"</span>
+  </div>
+  <div class="mt-4">
+    <partial-breadcrumbs
+      [home]="{ icon: 'pi pi-home', routerLink: '/' }"
+      [items]="items"
+      class="shadow-1"
+    ></partial-breadcrumbs>
+  </div>
 </div>

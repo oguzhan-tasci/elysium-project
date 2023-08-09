@@ -1,0 +1,13 @@
+<div class="checkbox">
+  <div class="flex align-items-center">
+    <p-checkbox
+      [name]="name"
+      [value]="value"
+      [ngModel]="selectedCities"
+      [inputId]="inputIdFor"
+    ></p-checkbox>
+    <label class="mx-1 my-2 font-semibold text-gray-800" [for]="inputIdFor">{{
+      value
+    }}</label>
+  </div>
+</div>

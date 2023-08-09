@@ -1,17 +1,7 @@
-.navbar {
-  height: 4rem;
-  display: flex;
-  align-items: center;
-  /* background: linear-gradient(rgba(1, 47, 112, 0.6), rgba(21, 105, 220, 1)); */
-  background: #fff;
-  justify-content: space-around;
+/* .navbar {
 }
 
-.navbar .logo h4 {
-  font-size: 26px;
-  font-weight: 600;
-  font-style: italic;
-  color: var(--dark-blue);
+.navbar .logo a {
 }
 
 .navbar .options ul {
@@ -22,4 +12,4 @@
 .navbar .options ul li {
   margin: 0 .5rem;
   font-weight: 500;
-}
+} */

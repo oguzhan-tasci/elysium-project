@@ -6,9 +6,11 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./service-box.component.css'],
 })
 export class ServiceBoxComponent {
-  @Input() imageUrl: string = '';
-  @Input() location: string = '';
-  @Input() stars: string = '';
-  @Input() title: string = 'We are one of best doctors in whhole ';
-  @Input() price: string = '';
+  @Input() sectionTitle: string;
+  @Input() image: string;
+  @Input() location: string;
+  @Input() stars: string;
+  @Input() title: string;
+  @Input() explanation: string;
+  @Input() price?: string;
 }

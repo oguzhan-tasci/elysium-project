@@ -1,20 +1,32 @@
-<div class="full-size navbar">
-  <div class="logo"><h4>Elysium</h4></div>
+<div
+  class="full-size flex justify-content-around align-items-center navbar h-5rem bg-white shadow-2"
+>
+  <div class="logo">
+    <a class="font-bold text-3xl font-italic text-blue-600" routerLink="/"
+      >Elysium</a
+    >
+  </div>
   <div class="options">
-    <ul>
-      <li><a routerLink="/">Health</a></li>
-      <li><a routerLink="/">Otel</a></li>
-      <li><span class="pi pi-language"></span></li>
+    <ul class="flex align-items-center">
+      <li class="text-md font-semibold mx-2">
+        <a routerLink="/products">Health</a>
+      </li>
+      <li class="text-md font-semibold mx-2">
+        <a routerLink="/products">Otel</a>
+      </li>
+      <li class="text-md font-semibold mx-2"><a class="pi pi-language"></a></li>
       <li>
         <p-button
           styleClass="p-button-sm p-button-rounded p-button-outlined"
           label="Login"
+          class="mx-2"
         ></p-button>
       </li>
       <li>
         <p-button
-          styleClass="p-button-sm p-button-rounded"
+          styleClass="p-button-sm p-button-rounded p-button-raised"
           label="Sign Up"
+          class="mx-2"
         ></p-button>
       </li>
     </ul>

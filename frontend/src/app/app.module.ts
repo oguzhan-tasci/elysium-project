@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { ProductDetailComponent } from './pages/product-detail/product-detail.component';
 import { ProductsPageComponent } from './pages/products-page/products-page.component';
@@ -33,9 +33,16 @@ import { SearchInputComponent } from './components/home-page/search-input/search
 import { ButtonModule } from 'primeng/button';
 import { ServiceBoxComponent } from './components/partials/service-box/service-box.component';
 import { RatingModule } from 'primeng/rating';
+import { DividerModule } from 'primeng/divider';
 import { CardModule } from 'primeng/card';
-
-
+import { ConfirmDialogModule } from 'primeng/confirmdialog';
+import { BreadcrumbModule } from 'primeng/breadcrumb';
+import { BreadcrumbsComponent } from './components/partials/breadcrumbs/breadcrumbs.component';
+import { CascadeSelectModule } from 'primeng/cascadeselect';
+import { DialogModule } from 'primeng/dialog';
+import { CheckboxModule } from 'primeng/checkbox';
+import { CheckboxComponent } from './components/partials/checkbox/checkbox.component';
+import { KeyFilterModule } from 'primeng/keyfilter';
 
 @NgModule({
   declarations: [
@@ -67,15 +74,25 @@ import { CardModule } from 'primeng/card';
     YouNeedToKnowComponent,
     SearchInputComponent,
     ServiceBoxComponent,
+    BreadcrumbsComponent,
+    CheckboxComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     ButtonModule,
     RatingModule,
     BrowserAnimationsModule,
-    CardModule
+    CardModule,
+    DividerModule,
+    ConfirmDialogModule,
+    BreadcrumbModule,
+    CascadeSelectModule,
+    DialogModule,
+    KeyFilterModule,
+    CheckboxModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

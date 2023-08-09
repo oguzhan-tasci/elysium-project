@@ -46,4 +46,31 @@ export const sample_services: ServiceBox[] = [
     title: 'The most admired business of aesthetics in Turkey',
     price: '50000',
   },
+  {
+    id: 6,
+    image:
+      'https://images.unsplash.com/photo-1574281570877-bd815ebb50a4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80',
+    location: 'California / USA',
+    stars: '5',
+    title: 'Best professor in USA',
+    price: '125000',
+  },
+  {
+    id: 7,
+    image:
+      'https://images.unsplash.com/photo-1562693315-23c0b35cacd5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80',
+    location: 'Berlin / Germany',
+    stars: '5',
+    title: 'Everyone try to reach me out for treatment',
+    price: '24100',
+  },
+  {
+    id: 8,
+    image:
+      'https://images.unsplash.com/photo-1602133187081-4874fdbd555c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80',
+    location: 'Delhi / India',
+    stars: '4',
+    title: 'You do not feel anything, it will be super easy',
+    price: '15000',
+  },
 ];

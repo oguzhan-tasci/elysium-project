@@ -2,13 +2,12 @@ import { Injectable } from '@angular/core';
 import { sample_services } from 'src/data';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ServicesService {
+  constructor() {}
 
-  constructor() { }
-
-  getAll() {
-    return sample_services;
+  getAll(value: number) {
+    return sample_services.splice(0, value);
   }
 }

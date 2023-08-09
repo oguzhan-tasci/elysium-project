@@ -11,6 +11,6 @@ export class FeaturedServicesComponent {
   services: ServiceBox[] = [];
 
   constructor(private businessService: ServicesService) {
-    this.services = this.businessService.getAll();
+    this.services = this.businessService.getAll(4);
   }
 }

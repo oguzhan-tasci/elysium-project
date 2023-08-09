@@ -1,17 +1,24 @@
-<div class="box">
-  <img [src]="imageUrl" [alt]="title" />
-  <div class="upper-side">
-    <div class="location-info">
-      <i></i>
-      <span>{{location}}</span>
+<div class="main-div">
+  <li
+    class="flex relative flex-column w-12 border-round-2xl my-4 bg-white-alpha-60 shadow-1"
+  >
+    <img class="w-12 border-round-2xl h-16rem" [src]="image" [alt]="title" />
+    <i class="absolute text-xl m-4 top-0 right-0 pi pi-heart"></i>
+    <div class="flex justify-content-between m-2">
+      <div class="">
+        <span class="font-normal">{{ location }}</span>
+      </div>
+      <div class="stars">
+        <i class="pi pi-star text-xs"></i>
+        <span class="mx-1 text-xs">{{ stars }}</span>
+      </div>
     </div>
-    <div class="stars">
-      <i></i>
-      <span>{{stars}}</span>
+    <div class="explanation">
+      <p class="text-gray-800 mx-2 text-sm">{{ explanation }}</p>
     </div>
-  </div>
-  <div class="title">{{title}} </div>
-  <div class="price">
-    {{ price | currency }}
-  </div>
+    <p-divider></p-divider>
+    <div class="text-md text-gray-700 font-semibold p-3">
+      {{ price | currency }}
+    </div>
+  </li>
 </div>

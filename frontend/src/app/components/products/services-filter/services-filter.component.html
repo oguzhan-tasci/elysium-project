@@ -1,3 +1,151 @@
-<div class="container services">
-    <p>Services' filter will be here</p>
+<div class="flex justify-content-between container-only-max-width">
+  <div class="flex justify-content-start align-items-center">
+    <div class="my-3 mr-4 px-2">
+      <p-button
+        styleClass="p-button-outlined p-button-secondary cities"
+        (click)="showDialog($event)"
+        icon="pi pi-external-link"
+        label="Cities"
+      ></p-button>
+      <p-dialog
+        header="Cities"
+        class=""
+        [(visible)]="CitiesVisible"
+        [style]="{ width: '40vw' }"
+      >
+        <div class="flex align-items-center flex-wrap">
+          <partial-checkbox
+            *ngFor="let city of allCities"
+            [name]="city.name"
+            class="mx-2"
+            [value]="city.value"
+            [(ngModel)]="selectedCities"
+            [inputIdFor]="city.inputIdFor"
+          ></partial-checkbox>
+        </div>
+      </p-dialog>
+    </div>
+    <div class="my-3 mx-4 px-2">
+      <p-button
+        styleClass="p-button-outlined p-button-secondary types"
+        (click)="showDialog($event)"
+        icon="pi pi-external-link"
+        label="Type"
+      ></p-button>
+      <p-dialog
+        header="Type Of Service"
+        class=""
+        [(visible)]="TypeVisible"
+        [style]="{ width: '40vw' }"
+      >
+        <div class="flex align-items-center flex-wrap">
+          <partial-checkbox
+            *ngFor="let type of types"
+            [name]="type.name"
+            class="mx-2"
+            [value]="type.value"
+            [(ngModel)]="selectedCities"
+            [inputIdFor]="type.inputIdFor"
+          ></partial-checkbox>
+        </div>
+      </p-dialog>
+    </div>
+    <div class="my-3 mx-4 px-2">
+      <p-button
+        styleClass="p-button-outlined p-button-secondary languages"
+        (click)="showDialog($event)"
+        icon="pi pi-external-link"
+        label="Languages"
+      ></p-button>
+      <p-dialog
+        header="Languages"
+        class=""
+        [(visible)]="LanguagesVisible"
+        [style]="{ width: '40vw' }"
+      >
+        <div class="flex align-items-center flex-wrap">
+          <partial-checkbox
+            *ngFor="let language of languages"
+            [name]="language.name"
+            class="mx-2"
+            [value]="language.value"
+            [(ngModel)]="selectedCities"
+            [inputIdFor]="language.inputIdFor"
+          ></partial-checkbox>
+        </div>
+      </p-dialog>
+    </div>
+    <div class="my-3 mx-4 px-2">
+      <p-button
+        styleClass="p-button-outlined p-button-secondary budget"
+        (click)="showDialog($event)"
+        icon="pi pi-external-link"
+        label="Budget"
+      ></p-button>
+      <p-dialog
+        header="Budget"
+        class=""
+        [(visible)]="BudgetVisible"
+        [style]="{ width: '40vw' }"
+      >
+        <div class="">
+          <div
+            class="flex align-items-center justify-content-center p-3 flex-wrap"
+          >
+            <div class="min-box flex align-items-center justify-content-center">
+              <button class="p-button-sm" pButton pRipple icon="pi pi-plus"></button>
+              <label for="money" class="font-bold block m-2">Min Value</label>
+              <input
+                pInputText
+                id="money"
+                placeholder="min"
+                pKeyFilter="money"
+                class="w-6 p-2"
+              />
+            </div>
+            <div
+              class="max-box flex align-items-center justify-content-center mt-2"
+            >
+              <button pButton pRipple icon="pi pi-minus"></button>
+              <label for="money" class="font-bold block m-2">Max Value</label>
+              <input
+                pInputText
+                id="money"
+                placeholder="max"
+                pKeyFilter="money"
+                class="w-6 p-2"
+              />
+            </div>
+          </div>
+        </div>
+      </p-dialog>
+    </div>
+  </div>
+  <div class="detail-filter">
+    <div class="my-3 px-2">
+      <p-button
+        styleClass="p-button-outlined p-button-secondary detail"
+        (click)="showDialog($event)"
+        icon="pi pi-external-link"
+        label="Details"
+      ></p-button>
+      <p-dialog
+        header="Detail Filter"
+        class=""
+        [(visible)]="DetailVisible"
+        [style]="{ width: '40vw' }"
+      >
+        <div class="flex align-items-center flex-wrap">
+          <partial-checkbox
+            *ngFor="let city of allCities"
+            [name]="city.name"
+            class="mx-2"
+            [value]="city.value"
+            [(ngModel)]="selectedCities"
+            [inputIdFor]="city.inputIdFor"
+          ></partial-checkbox>
+        </div>
+      </p-dialog>
+    </div>
+  </div>
 </div>

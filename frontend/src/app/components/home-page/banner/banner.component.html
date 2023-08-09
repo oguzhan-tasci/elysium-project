@@ -1,50 +1,56 @@
-<div class="p-8 banner flex flex-column align-items-start">
-  <div class="flex flex-column text-start title mb-2">
-    <span class="font-bold text-5xl text-white">Go Everywhere.</span>
-    <span class="font-bold text-5xl text-100"
-      >Live For You and Your Health.</span
+<div class="p-8 banner flex align-items-center">
+  <div class="flex flex-column align-items-start">
+    <div class="flex flex-column text-start title mb-2">
+      <span class="font-bold text-5xl text-white">Go Everywhere.</span>
+      <span class="font-bold text-5xl text-100"
+        >Live For You and Your Health.</span
+      >
+    </div>
+    <div class="subtitle mb-4">
+      <p class="font-medium text-md text-300">
+        How would you like to spend your time?
+      </p>
+    </div>
+    <div
+      class="flex justify-content-between bg-blue-600 shadow-2 align-items-end border-round-3xl mt-4 px-6 py-4"
     >
+      <div class="location mr-4">
+        <div class="flex align-items-center mb-1">
+          <i class="pi pi-search mr-1 text-300 text-sm"></i>
+          <span class="text-300 text-lg">Location</span>
+        </div>
+        <div class="input-div">
+          <input
+            class="py-3 px-4 border-none border-round-lg outline-none"
+            type="text"
+            placeholder="Where Do you wanna go?"
+          />
+        </div>
+      </div>
+      <div class="service mr-4">
+        <div class="flex align-items-center mb-1">
+          <i class="pi pi-user mr-1 text-sm text-300"></i>
+          <span class="text-300 text-lg">Service</span>
+        </div>
+        <div class="input-div">
+          <input
+            class="py-3 px-4 border-none border-round-lg outline-none"
+            type="text"
+            placeholder="What are you looking for?"
+          />
+        </div>
+      </div>
+      <div class="search-button ml-3">
+        <p-button
+          styleClass="p-button-rounded p-button-raised"
+          label="Search"
+          routerLink="/products"
+          icon="pi pi-search"
+        ></p-button>
+      </div>
+    </div>
   </div>
-  <div class="subtitle mb-4">
-    <p class="font-medium text-sm text-300">
-      How would you like to spend your time?
-    </p>
-  </div>
-  <div
-    class="flex justify-content-between align-items-end bg-blue-700 border-round-3xl mt-4 px-7 py-4"
-  >
-    <div class="location mr-4">
-      <div class="flex align-items-center mb-1">
-        <i class="pi pi-search mr-1 text-300 text-sm"></i>
-        <span class="text-300 text-sm">Location</span>
-      </div>
-      <div class="input-div">
-        <input
-          class="py-2 px-4 border-none border-round-lg outline-none"
-          type="text"
-          placeholder="Where Do you wanna go?"
-        />
-      </div>
-    </div>
-    <div class="service mr-4">
-      <div class="flex align-items-center mb-1">
-        <i class="pi pi-user mr-1 text-sm text-300"></i>
-        <span class="text-300 text-sm">Service</span>
-      </div>
-      <div class="input-div">
-        <input
-          class="py-2 px-4 border-none border-round-lg outline-none"
-          type="text"
-          placeholder="What are you looking for?"
-        />
-      </div>
-    </div>
-    <div class="search-button ml-3">
-      <p-button
-        styleClass="p-button-rounded p-button-raised"
-        label="Search"
-        icon="pi pi-search"
-      ></p-button>
-    </div>
+  <div class=" p-3 my-8">
+    <img class="w-12" src="../../../../assets//homepage/world-svg.svg" alt="" />
   </div>
 </div>

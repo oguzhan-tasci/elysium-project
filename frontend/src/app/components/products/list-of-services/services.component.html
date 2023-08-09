@@ -1,3 +1,13 @@
-<div class="container services">
-    <p>Services will be here</p>
+<div class="container-only-max-width flex mb-8 ">
+  <ul class="flex flex-wrap">
+    <partial-service-box
+      class="mx-2"
+      *ngFor="let service of services"
+      [image]="service.image"
+      [explanation]="service.title"
+      [location]="service.location"
+      [stars]="service.stars"
+      [price]="service.price"
+    ></partial-service-box>
+  </ul>
 </div>
