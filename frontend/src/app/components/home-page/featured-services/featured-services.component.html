@@ -1,35 +1,6 @@
-<!-- <div class="container featured-services">
-  <p class="text-2xl font-semibold text-start">Featured Services</p>
-  <ul class="flex justify-content-start p-0 w-full">
-    <li
-      class="flex flex-column w-3 p-3 mx-2 border-round-2xl my-4 bg-white-alpha-60 shadow-2"
-      *ngFor="let service of services; let even = even; let odd = odd"
-      [ngClass]="{ odd: odd, even: even }"
-    >
-      <img
-        class="w-full border-round-2xl h-16rem"
-        [src]="service.image"
-        [alt]="service.title"
-      />
-      <div class="flex justify-content-between mt-3 px-1">
-        <div class="">
-          <span class="font-bold text-sm">{{ service.location }}</span>
-        </div>
-        <div class="stars">
-          <i class="pi pi-star text-xs"></i>
-          <span class="mx-1 text-xs">{{ service.stars }}</span>
-        </div>
-      </div>
-      <div class="text-sm text-gray-700 px-1 my-1">
-        {{ service.price | currency }}
-      </div>
-    </li>
-  </ul>
-</div> -->
-
 <div class="container">
   <p class="text-2xl font-semibold text-start">Featured Services</p>
-  <ul class="flex justify-content-start ">
+  <ul class="flex justify-content-start">
     <partial-service-box
       class="mx-2"
       *ngFor="let service of services"

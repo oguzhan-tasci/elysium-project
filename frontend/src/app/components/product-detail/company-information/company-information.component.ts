@@ -6,10 +6,17 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
   styleUrls: ['./company-information.component.css'],
 })
 export class CompanyInformationComponent implements OnInit {
-  @ViewChild('info') info: ElementRef;
+  @ViewChild('info', { static: true }) info: ElementRef;
+
   constructor() {}
-  ngOnInit(): void {}
-  ngAfterViewInit(): void {
-    console.log(this.info.nativeElement.style);
+  ngOnInit(): void {
+    console.log(this.info.nativeElement);
+    const { x, y } = this.info.nativeElement.getBoundingClientRect();
+    console.log(x);
+    console.log(y);
+  }
+  ngAfterViewInit(): void {}
+  onUpload(event) {
+    console.log(event);
   }
 }

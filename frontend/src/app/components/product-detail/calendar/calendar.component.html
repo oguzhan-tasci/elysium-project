@@ -1,3 +1,37 @@
-<div class="calendar">
-  <p>calendar works!</p>
+<div class="mx-3 p-3">
+  <div class="flex justify-content-between">
+    <p-card
+      header="Select Available Day"
+      subheader="You can define day in order to be in that day."
+    >
+      <p-calendar
+        [(ngModel)]="date"
+        [inline]="true"
+        [showWeek]="true"
+        [minDate]="minDate"
+        [maxDate]="maxDate"
+      ></p-calendar>
+    </p-card>
+    <p-card
+      header="Select Available Time"
+      subheader="If you have leisure time for this, you can select time."
+    >
+      <p-table
+        [value]="clocks"
+        styleClass="small"
+        [scrollable]="true"
+        scrollHeight="405px"
+      >
+        <ng-template pTemplate="body" let-product>
+          <tr *ngFor="let clock of clocks">
+            <td
+              [ngClass]="clock.available ? 'availableTrue' : 'availableFalse'"
+            >
+              {{ clock.time }}
+            </td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </p-card>
+  </div>
 </div>

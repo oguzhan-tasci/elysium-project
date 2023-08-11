@@ -1,5 +1,13 @@
 .calendar {
-  margin: 2rem;
-  background-color: lemonchiffon;
-  padding: 1rem .5rem;
+  background-color: lightcoral lightsalmon;
+}
+
+.availableTrue {
+  background-color: #3a9b42;
+  color: white;
+}
+
+.availableFalse {
+  background-color: #db1b1b;
+  color: #c6c2c2;
 }

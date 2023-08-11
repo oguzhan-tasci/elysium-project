@@ -1,20 +1,27 @@
 <div class="container information">
-  <div class="text-2xl font-semibold text-start mb-4">We Always Here For You!</div>
-    <div class="">
+  <div class="text-2xl font-semibold text-start mb-4">
+    We Always Here For You!
+  </div>
+  <div class="flex flex-column">
     <div
-      class="flex p-5 bg-gray-50 align-items-center justify-content-center"
-      *ngFor="let information of informations let even = even; let odd = odd;"
+      class="flex py-2 px-5 align-items-center justify-content-center"
+      *ngFor="let information of informations; let even = even; let odd = odd"
       [ngClass]="{ odd: odd, even: even }"
     >
       <div class="">
         <img
-          class="w-20rem h-16rem border-round-2xl m-5 bg-blue-600 "
+          class="w-18rem h-16rem border-round-2xl m-5 bg-contain"
           [src]="information.image"
           [alt]="information.title"
         />
       </div>
       <div class="flex flex-column align-item-start mr-8">
-        <p class="font-semibold text-lg text-black mb-3">{{ information.title }}</p>
+        <div class="flex align-items-start">
+          <i [class]="information.iconClass"></i>
+          <p class="mx-2 font-semibold text-lg text-black mb-3">
+            {{ information.title }}
+          </p>
+        </div>
         <p class="line-height-4 text-gray-800">
           {{ information.subtitle }}
         </p>

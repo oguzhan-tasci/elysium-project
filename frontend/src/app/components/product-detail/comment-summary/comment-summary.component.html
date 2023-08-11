@@ -1,3 +1,40 @@
-<div class="container comment-summary">
-    <p>Comment summary will be here!</p>
-</div>
+<p-card header="Summary Of Comments" styleClass="container">
+  <div class="general mx-4 my-2">
+    <i class="text-lg pi pi-star"></i>
+    <span class="text-gray-800 mx-1 font-semibold text-lg">4.87 (219)</span>
+  </div>
+  <div
+    class="comment-summary flex align-items-center justify-content-between p-2"
+  >
+    <div class="line-height-4 w-6">
+      <ul class="p-0">
+        <li
+          class="flex align-items-center my-2 justify-content-between"
+          *ngFor="let item of firstColumn"
+        >
+          <p class="text-sm font-semibold">{{ item.title }}</p>
+          <p-progressBar
+            [style]="{ width: '320px' }"
+            [value]="item.value"
+            [color]="item.value > 50 ? '' : 'red'"
+          ></p-progressBar>
+        </li>
+      </ul>
+    </div>
+    <div class="line-height-4 w-6">
+      <ul>
+        <li
+          class="flex align-items-center my-2 justify-content-between"
+          *ngFor="let item of secondColumn"
+        >
+          <p>{{ item.title }}</p>
+          <p-progressBar
+            [style]="{ width: '320px' }"
+            [value]="item.value"
+            [color]="item.value > 50 ? '' : 'red'"
+          ></p-progressBar>
+        </li>
+      </ul>
+    </div>
+  </div>
+</p-card>

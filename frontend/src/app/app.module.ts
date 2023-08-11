@@ -43,6 +43,17 @@ import { DialogModule } from 'primeng/dialog';
 import { CheckboxModule } from 'primeng/checkbox';
 import { CheckboxComponent } from './components/partials/checkbox/checkbox.component';
 import { KeyFilterModule } from 'primeng/keyfilter';
+import { CalendarModule } from 'primeng/calendar';
+import { FileUploadModule } from 'primeng/fileupload';
+import { GalleriaModule } from 'primeng/galleria';
+import { Avatar, AvatarModule } from 'primeng/avatar';
+import { AvatarGroupModule } from 'primeng/avatargroup';
+import { CarouselModule } from 'primeng/carousel';
+import { ToastModule } from 'primeng/toast';
+import { TabViewModule } from 'primeng/tabview';
+import { TimelineModule } from 'primeng/timeline';
+import { TableModule } from 'primeng/table';
+import { ProgressBarModule } from 'primeng/progressbar';
 
 @NgModule({
   declarations: [
@@ -92,7 +103,18 @@ import { KeyFilterModule } from 'primeng/keyfilter';
     CascadeSelectModule,
     DialogModule,
     KeyFilterModule,
+    CalendarModule,
     CheckboxModule,
+    GalleriaModule,
+    FileUploadModule,
+    AvatarModule,
+    AvatarGroupModule,
+    CarouselModule,
+    TimelineModule,
+    ToastModule,
+    TabViewModule,
+    TableModule,
+    ProgressBarModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
