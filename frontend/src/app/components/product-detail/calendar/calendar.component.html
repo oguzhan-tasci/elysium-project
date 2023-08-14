@@ -1,10 +1,12 @@
-<div class="mx-3 p-3">
-  <div class="flex justify-content-between">
+<div class="mx-3 p-3 container">
+  <div class="content w-12 flex justify-content-between">
     <p-card
+      class="card w-6 mx-2"
       header="Select Available Day"
       subheader="You can define day in order to be in that day."
     >
       <p-calendar
+        class="calendar"
         [(ngModel)]="date"
         [inline]="true"
         [showWeek]="true"
@@ -13,6 +15,7 @@
       ></p-calendar>
     </p-card>
     <p-card
+      class="card w-6 mx-2"
       header="Select Available Time"
       subheader="If you have leisure time for this, you can select time."
     >

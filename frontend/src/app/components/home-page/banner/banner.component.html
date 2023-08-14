@@ -1,48 +1,44 @@
-<div class="p-8 banner flex align-items-center">
-  <div class="flex flex-column align-items-start">
-    <div class="flex flex-column text-start title mb-2">
-      <span class="font-bold text-5xl text-white">Go Everywhere.</span>
-      <span class="font-bold text-5xl text-100"
+<div class="banner p-8 flex align-items-center justify-content-around">
+  <div class="low-banner flex flex-column align-items-start">
+    <div class="main-title flex flex-column text-start title mb-2">
+      <span class="title font-bold text-5xl text-white">Go Everywhere.</span>
+      <span class="subtitle font-bold text-5xl text-100"
         >Live For You and Your Health.</span
       >
     </div>
-    <div class="subtitle mb-4">
-      <p class="font-medium text-md text-300">
+    <div class="mb-4">
+      <p class="small-title font-medium text-md text-300">
         How would you like to spend your time?
       </p>
     </div>
     <div
-      class="flex justify-content-between bg-blue-600 shadow-2 align-items-end border-round-3xl mt-4 px-6 py-4"
+      class="fields flex justify-content-between bg-blue-600 shadow-1 align-items-end border-round-3xl p-4"
     >
-      <div class="location mr-4">
+      <div *ngFor="let values of inputValues" class="mr-3">
         <div class="flex align-items-center mb-1">
-          <i class="pi pi-search mr-1 text-300 text-sm"></i>
-          <span class="text-300 text-lg">Location</span>
+          <i [class]="values.iconClass"></i>
+          <span class="text-300 text-lg">{{ values.title }}</span>
         </div>
         <div class="input-div">
-          <input
+          <span class="p-input-icon-right">
+            <input
+              type="text"
+              pInputText
+              class="input outline-none border-none text-sm font-semibold text-gray-600"
+              [placeholder]="values.inputPlaceholder"
+              [(ngModel)]="values.myValue"
+            />
+          </span>
+          <!-- <input
             class="py-3 px-4 border-none border-round-lg outline-none"
             type="text"
-            placeholder="Where Do you wanna go?"
-          />
-        </div>
-      </div>
-      <div class="service mr-4">
-        <div class="flex align-items-center mb-1">
-          <i class="pi pi-user mr-1 text-sm text-300"></i>
-          <span class="text-300 text-lg">Service</span>
-        </div>
-        <div class="input-div">
-          <input
-            class="py-3 px-4 border-none border-round-lg outline-none"
-            type="text"
-            placeholder="What are you looking for?"
-          />
+            [placeholder]="values.inputPlaceholder"
+          /> -->
         </div>
       </div>
       <div class="search-button ml-3">
         <p-button
-          styleClass="p-button-rounded p-button-raised"
+          styleClass="rbutton p-button-rounded p-button-raised w-full"
           label="Search"
           routerLink="/products"
           icon="pi pi-search"
@@ -50,7 +46,11 @@
       </div>
     </div>
   </div>
-  <div class=" p-3 my-8">
-    <img class="w-12" src="../../../../assets//homepage/world-svg.svg" alt="" />
+  <div class="image-div p-6 w-8 max-w-full text-end">
+    <img
+      class="w-full"
+      src="../../../../assets//homepage/world-svg.svg"
+      alt=""
+    />
   </div>
 </div>

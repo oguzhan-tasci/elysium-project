@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { sample_services } from 'src/data';
+import { sample_images } from 'src/data-images';
 import { sample_otels } from 'src/data-otel';
 
 @Injectable({
@@ -13,5 +14,8 @@ export class ServicesService {
   }
   getAllOtels(value: number) {
     return sample_otels.splice(0, value);
+  }
+  getAllImages() {
+    return sample_images;
   }
 }

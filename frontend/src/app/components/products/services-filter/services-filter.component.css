@@ -1,3 +1,9 @@
 .services {
-    background-color: rosybrown;
+  background-color: rosybrown;
+}
+
+@media (max-width: 768px) {
+  .filter {
+    display: none !important;
+  }
 }

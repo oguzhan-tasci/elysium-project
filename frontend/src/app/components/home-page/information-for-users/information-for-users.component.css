@@ -4,11 +4,19 @@
   padding: 0 3rem;
 }
 
-/* .even::after {
-    content : "||||";
-    color: black;
+@media (max-width : 768px) {
+  .container .single-info {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .container .single-info .single-exp {
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important
+  }
+
+  .container .single-info .single-exp .info-title {
+    margin : 0 .2rem !important;
+  }
 }
-.odd::after {
-    content : "||||";
-    color: black;
-} */

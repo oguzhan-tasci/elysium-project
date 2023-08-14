@@ -1,15 +1,9 @@
-/* .navbar {
-}
+@media only screen and (max-width: 800px) {
+  .options {
+    display: none;
+  }
 
-.navbar .logo a {
+  .logo {
+    text-align: start;
+  }
 }
-
-.navbar .options ul {
-  display: flex;
-  align-items: center;
-}
-
-.navbar .options ul li {
-  margin: 0 .5rem;
-  font-weight: 500;
-} */

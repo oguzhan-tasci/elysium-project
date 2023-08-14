@@ -1,3 +1,10 @@
-.stories {
-  background-color: lime;
+@media (max-width : 768px) {
+  .container .main-div {
+    display: flex !important;
+    width: 100% ;
+    flex-direction: column !important;
+  }
+  .container .main-div img {
+    display: none;
+  }
 }

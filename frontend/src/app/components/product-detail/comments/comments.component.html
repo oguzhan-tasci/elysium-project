@@ -1,13 +1,13 @@
 <div class="container comments">
   <div
     *ngFor="let comment of comments"
-    class="comment flex align-items-start p-1"
+    class="all-comment flex align-items-start p-1"
   >
     <div class="image">
       <p-avatar [image]="comment.image" size="large" shape="circle"></p-avatar>
     </div>
     <div class="comment-content flex flex-column mx-3">
-      <p class="font-semibold text-gray-800 text-md">{{ comment.name }}</p>
+      <p class="name font-semibold text-gray-800 text-md">{{ comment.name }}</p>
       <div class="country-info text-gray-700 my-1 flex align-items-center">
         <img [src]="comment.flag" [alt]="comment.name" />
         <span class="ml-1">{{ comment.country }}</span>
@@ -22,8 +22,8 @@
           {{ comment.comment }}
         </p>
       </div>
-      <p-divider styleClass="w-24rem" align="center">
-        <b class="text-gray-500 font-light text-xs">share your opinion</b>
+      <p-divider styleClass="w-full" align="center">
+        <b class="text-gray-500 font-medium text-xs">share your opinion</b>
       </p-divider>
     </div>
   </div>

@@ -1,2 +1,34 @@
-.comment-summary {
+@media (max-width:1000px) {
+  .comment-summary {
+    flex-direction: column;
+  }
+
+  .comment-summary .left-side,
+  .right-side {
+    width: 100% !important;
+    line-height: 2rem !important;
+  }
+
+  .comment-summary .left-side li,
+  .right-side li {
+    padding: .2rem 2rem !important;
+  }
+}
+
+@media (max-width:736px) {
+
+  .comment-summary .left-side li,
+  .right-side li {
+    padding: 0 !important;
+  }
+
+  .comment-summary .left-side li p,
+  .right-side li p {
+    font-size: 13px !important;
+  }
+
+  .comment-summary .left-side li .bar,
+  .right-side li .bar {
+    padding: .2rem 1rem !important;
+  }
 }

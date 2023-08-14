@@ -1,4 +1,15 @@
-.odd:hover,
-.even:hover {
-color: var(--dark-blue);
+@media (max-width : 616px) {
+  .container {
+    max-width: 100% !important;
+  }
+
+  .container ul {
+    display: flex !important;
+    justify-content: center !important;
+    width: 100% !important;
+  }
+
+  .container ul .services {
+    width: max-content !important;
+  }
 }

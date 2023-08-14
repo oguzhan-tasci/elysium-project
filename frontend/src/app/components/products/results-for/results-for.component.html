@@ -1,14 +1,16 @@
 <div class="flex flex-column container-only-max-width mt-3 p-2">
-  <div class="flex align-items-center">
-    <p class="text-gray-800 text-2xl font-semibold mx-1">Results for :</p>
-    <span class="mx-1 text-2xl font-bold">"Hair Trasplant",</span>
-    <span class="mx-1 text-2xl font-bold">"Istanbul"</span>
+  <div class="results flex align-items-center">
+    <p class="prefix text-gray-800 text-2xl font-semibold mx-1">
+      Results for :
+    </p>
+    <span class="service-name mx-1 text-2xl font-bold">"Hair Trasplant",</span>
+    <span class="location-name mx-1 text-2xl font-bold">"Istanbul"</span>
   </div>
   <div class="mt-4">
     <partial-breadcrumbs
       [home]="{ icon: 'pi pi-home', routerLink: '/' }"
       [items]="items"
-      class="shadow-1"
+      class="shadow-1 breadcrumbs"
     ></partial-breadcrumbs>
   </div>
 </div>

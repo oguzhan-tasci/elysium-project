@@ -1,0 +1,19 @@
+@media (max-width : 1100px) {
+  .famous-cities ul {
+    flex-wrap: wrap !important;
+  }
+
+}
+@media (max-width : 768px) {
+  .famous-cities ul {
+    display: flex;
+    flex-direction: column !important;
+    justify-content: center !important;
+    margin: auto !important;
+  }
+
+  .famous-cities ul li {
+    width: 100% !important;
+    margin: .6rem auto;
+  }
+}

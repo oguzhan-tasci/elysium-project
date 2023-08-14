@@ -1,4 +1,33 @@
 .footer {
-  margin: 1rem auto auto auto;
-  padding: 1.4rem .5rem;
+  /* margin: 1rem auto auto auto;
+  padding: 1.4rem .5rem; */
+}
+
+@media (max-width: 768px) {
+  .footer .grid {
+    width: 100% !important;
+    text-align: center !important;
+    margin: auto;
+  }
+
+  .footer .grid .socials {
+    text-align: center !important;
+    margin: auto;
+  }
+
+  .footer .grid>* {
+    width: 100% !important;
+    text-align: center !important;
+    margin: 1rem auto;
+    padding: .5rem;
+  }
+
+  .footer .our {
+    padding-left: 40px !important;
+  }
+
+  .footer .logo .vision {
+    padding-right: 0 !important;
+    text-align: center !important;
+  }
 }

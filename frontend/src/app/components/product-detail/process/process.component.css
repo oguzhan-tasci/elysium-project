@@ -1,2 +1,12 @@
-.process {
+@media (max-width:680px) {
+    .container {
+        width: 100% !important;
+        margin: 0 !important;
+    }
+    .process {
+        flex-direction: column ;
+    }
+    .process .content {
+        width: 100% !important;
+    }
 }

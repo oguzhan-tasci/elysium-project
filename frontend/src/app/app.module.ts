@@ -54,6 +54,7 @@ import { TabViewModule } from 'primeng/tabview';
 import { TimelineModule } from 'primeng/timeline';
 import { TableModule } from 'primeng/table';
 import { ProgressBarModule } from 'primeng/progressbar';
+import { InputTextModule } from 'primeng/inputtext';
 
 @NgModule({
   declarations: [
@@ -114,6 +115,7 @@ import { ProgressBarModule } from 'primeng/progressbar';
     ToastModule,
     TabViewModule,
     TableModule,
+    InputTextModule,
     ProgressBarModule,
   ],
   providers: [],

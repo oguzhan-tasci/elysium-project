@@ -1,3 +1,16 @@
-.services {
-    background-color: mediumslateblue;
+@media (max-width: 555px) {
+  ul {
+    padding: 0 !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+  }
+
+  ul>* {
+    margin: .5rem !important;
+  }
+}
+
+ul {
+  padding: 0 !important;
 }

@@ -1,2 +1,8 @@
-.need-to-know {
+@media (max-width:768px) {
+    .need-to-know {
+        width: 100% !important;
+    }
+    .content {
+        flex-direction: column;
+    }
 }

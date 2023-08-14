@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ServicesService } from 'src/app/services/services.service';
 
 @Component({
   selector: 'pd-upper-left-side',
@@ -6,35 +7,64 @@ import { Component } from '@angular/core';
   styleUrls: ['./upper-left-side.component.css'],
 })
 export class UpperLeftSideComponent {
-  events: any[];
+  images: any[] | undefined;
+  thumbnailImages: any[] | undefined;
 
-  constructor() {
-    this.events = [
+  constructor(private imageService: ServicesService) {}
+
+  ngOnInit() {
+    this.images = this.imageService.getAllImages();
+    this.thumbnailImages = [
       {
-        status: 'Ordered',
-        date: '15/10/2020 10:30',
-        icon: 'pi pi-shopping-cart',
-        color: '#9C27B0',
-        image: 'game-controller.jpg',
+        id: 1,
+        thumbnail:
+          'https://plus.unsplash.com/premium_photo-1682145291930-43b73e27446e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80',
+        alt: 'resim1',
       },
       {
-        status: 'Processing',
-        date: '15/10/2020 14:00',
-        icon: 'pi pi-cog',
-        color: '#673AB7',
+        id: 2,
+        thumbnail:
+          'https://plus.unsplash.com/premium_photo-1682145291930-43b73e27446e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80',
+        alt: 'resim1',
       },
       {
-        status: 'Shipped',
-        date: '15/10/2020 16:15',
-        icon: 'pi pi-shopping-cart',
-        color: '#FF9800',
+        id: 3,
+        thumbnail:
+          'https://plus.unsplash.com/premium_photo-1682145291930-43b73e27446e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80',
+        alt: 'resim1',
       },
       {
-        status: 'Delivered',
-        date: '16/10/2020 10:00',
-        icon: 'pi pi-check',
-        color: '#607D8B',
+        id: 4,
+        thumbnail:
+          'https://plus.unsplash.com/premium_photo-1682145291930-43b73e27446e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80',
+        alt: 'resim1',
       },
     ];
+    // this.images = [
+    //   {
+    //     itemImageSrc : 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2xpbmljfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60',
+    //     thumbnailImageSrc : 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2xpbmljfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60',
+    //     alt : 'title 1',
+    //     title : 'Title 1',
+    //   },
+    //   {
+    //     itemImageSrc : 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2xpbmljfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60',
+    //     thumbnailImageSrc : 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2xpbmljfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60',
+    //     alt : 'title 1',
+    //     title : 'Title 1',
+    //   },
+    //   {
+    //     itemImageSrc : 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2xpbmljfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60',
+    //     thumbnailImageSrc : 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2xpbmljfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60',
+    //     alt : 'title 1',
+    //     title : 'Title 1',
+    //   },
+    //   {
+    //     itemImageSrc : 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2xpbmljfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60',
+    //     thumbnailImageSrc : 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2xpbmljfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60',
+    //     alt : 'title 1',
+    //     title : 'Title 1',
+    //   },
+    // ]
   }
 }
