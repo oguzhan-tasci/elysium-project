@@ -16,7 +16,6 @@ import { FooterComponent } from './components/common/footer/footer.component';
 import { NavbarComponent } from './components/common/navbar/navbar.component';
 import { PaginationComponent } from './components/common/pagination/pagination.component';
 import { ResultsForComponent } from './components/products/results-for/results-for.component';
-import { ServicesComponent } from './components/products/list-of-services/services.component';
 import { ServicesFilterComponent } from './components/products/services-filter/services-filter.component';
 import { CalendarComponent } from './components/product-detail/calendar/calendar.component';
 import { CommentSummaryComponent } from './components/product-detail/comment-summary/comment-summary.component';
@@ -71,7 +70,6 @@ import { InputTextModule } from 'primeng/inputtext';
     NavbarComponent,
     PaginationComponent,
     ResultsForComponent,
-    ServicesComponent,
     ServicesFilterComponent,
     CalendarComponent,
     CommentSummaryComponent,

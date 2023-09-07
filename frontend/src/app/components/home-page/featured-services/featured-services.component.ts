@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ServiceBox } from 'src/app/models/ServiceBox';
-import { ServicesService } from 'src/app/services/services.service';
+import { HealthService } from 'src/app/services/services/health/health.service';
 
 @Component({
   selector: 'hp-featured-services',
@@ -10,7 +10,7 @@ import { ServicesService } from 'src/app/services/services.service';
 export class FeaturedServicesComponent {
   services: ServiceBox[] = [];
 
-  constructor(private businessService: ServicesService) {
-    this.services = this.businessService.getAll(4);
+  constructor(private healthService: HealthService) {
+    this.services = this.healthService.getAllServices(4);
   }
 }

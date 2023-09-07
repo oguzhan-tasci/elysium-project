@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Otel } from 'src/app/models/Otel';
-import { ServicesService } from 'src/app/services/services.service';
+import { OtelInfoService } from 'src/app/services/otel/otel-info.service';
 
 @Component({
   selector: 'pd-near-hotels',
@@ -9,12 +9,11 @@ import { ServicesService } from 'src/app/services/services.service';
 })
 export class NearHotelsComponent {
   otels: Otel[] = [];
-  constructor(private servicesService: ServicesService) {}
+  constructor(private otelService: OtelInfoService) {}
 
   ngOnInit() {
-    this.otels = this.servicesService.getAllOtels(8);
+    this.otels = this.otelService.getAllOtels(8);
     console.log(this.otels);
-    
   }
   ngAfterViewInit() {}
 }

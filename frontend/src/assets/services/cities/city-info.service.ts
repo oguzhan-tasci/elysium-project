@@ -4,8 +4,9 @@ import { sample_images } from 'src/data-images';
 @Injectable({
   providedIn: 'root',
 })
-export class ServicesService {
+export class CityInfoService {
   constructor() {}
+
   getAllImages() {
     return sample_images;
   }

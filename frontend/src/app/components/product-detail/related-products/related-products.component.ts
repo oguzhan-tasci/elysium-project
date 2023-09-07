@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ServiceBox } from 'src/app/models/ServiceBox';
-import { ServicesService } from 'src/app/services/services.service';
+import { HealthService } from 'src/app/services/services/health/health.service';
 
 @Component({
   selector: 'pd-related-products',
@@ -10,9 +10,9 @@ import { ServicesService } from 'src/app/services/services.service';
 export class RelatedProductsComponent {
   products: ServiceBox[] = [];
 
-  constructor(private serviceService: ServicesService) {}
+  constructor(private healthService: HealthService) {}
 
   ngOnInit() {
-    this.products = this.serviceService.getAll(8);
+    this.products = this.healthService.getAllServices(8);
   }
 }
