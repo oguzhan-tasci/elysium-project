@@ -1,0 +1,6 @@
+:host ::ng-deep {
+  .chipClass.p-chips {
+    width: 100%;
+    display: inline-block;
+  }
+}

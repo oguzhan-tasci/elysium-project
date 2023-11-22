@@ -1,0 +1,81 @@
+<div class="navbar">
+  <div
+    class="flex align-items-center justify-content-between mx-8 my-4 content"
+  >
+    <div class="left-side">
+      <a
+        class="cursor-pointer font-bold text-3xl font-italic text-blue-600"
+        routerLink="/"
+        >Elysium</a
+      >
+    </div>
+    <div class="middle">
+      <ul class="flex align-items-center">
+        <li *ngFor="let item of menu" class="mx-2 font-semibold">
+          <a class="cursor-pointer" [routerLink]="item.link">{{
+            item.value
+          }}</a>
+        </li>
+      </ul>
+    </div>
+    <div class="flex align-items-center">
+      <i
+        (click)="showDialog()"
+        class="pi pi-bell text-xl cursor-pointer"
+        pBadge
+        severity="danger"
+        value="4"
+      ></i>
+      <p-dialog
+        header="Notifications"
+        [(visible)]="visible"
+        closeIcon="pi pi-arrow-left"
+        [modal]="true"
+        [draggable]="false"
+        position="top"
+        [style]="{ width: '60vw' }"
+      >
+        <ul class="p-3">
+          <li
+            *ngFor="let item of notifications"
+            class="flex flex-wrap my-4 justify-content-between"
+          >
+            <div class="flex">
+              <p-avatar
+                [image]="item.personAvatar"
+                size="large"
+                shape="circle"
+                class="mx-2"
+              ></p-avatar>
+              <div class="flex flex-wrap flex-column line-height-3">
+                <p class="text-black">
+                  <span class="text-blue-800 font-semibold">{{
+                    item.personName
+                  }}</span>
+                  {{ item.title }}
+                </p>
+                <p class="text-sm text-gray-700">
+                  {{ item.subtitle }}
+                </p>
+                <p class="text-xs text-gray-600">{{ item.time }}</p>
+              </div>
+            </div>
+            <div class="right-side">
+              <img
+                [src]="item.serviceImage"
+                [alt]="item.title"
+                class="border-round-lg max-w-5rem"
+              />
+            </div>
+          </li>
+        </ul>
+      </p-dialog>
+      <p-avatar
+        image="https://primefaces.org/cdn/primeng/images/demo/avatar/amyelsner.png"
+        styleClass="mx-5 cursor-pointer"
+        shape="circle"
+        routerLink="/become-seller"
+      ></p-avatar>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+<div class="max-h-screen overflow-scroll content">
+  <p class="mt-4 font-semibold text-xl">Tüm Mesajlar</p>
+  <div class="flex flex-column flex-wrap ">
+    <div
+      *ngFor="let item of messages"
+      class="relative flex align-items-center border-round-xl m-3 bg-gray-200 py-2 px-3"
+    >
+      <span class="text-xs text-gray-800 py-2 px-3 absolute top-0 right-0">{{
+        item.minutes
+      }}</span>
+      <p-avatar
+        [image]="item.avatarUrl"
+        styleClass="mr-2"
+        size="large"
+        shape="circle"
+      ></p-avatar>
+
+      <div class="my-2 mx-3 infos">
+        <p class="font-semibold">{{ item.name }}</p>
+        <p class="text-gray-800 text-sm">
+          {{ item.message }}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

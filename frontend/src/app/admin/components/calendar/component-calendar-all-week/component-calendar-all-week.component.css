@@ -1,0 +1,96 @@
+i {
+  font-size: 13px;
+}
+
+td {
+  padding: 1px !important;
+}
+p {
+  padding: 1rem;
+}
+
+.bos {
+  background-color: #f2f1f1;
+  color: rgb(58, 58, 58);
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.dolu {
+  background-color: #07139b;
+  border-radius: 6px;
+  color: #fff;
+  font-weight: 600;
+
+}
+
+.dolu-buttons,
+.bos-buttons {
+  display: none;
+}
+
+.openIcon {
+  width: 30px;
+  height: 30px;
+  background-color: #2563eb;
+  display: flex;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 0 .2rem !important;
+  padding: 0 !important;
+}
+
+.infoIcon {
+  width: 30px;
+  height: 30px;
+  background-color: #ff1e00;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 50%;
+  margin: 0 .2rem !important;
+  padding: 0 !important;
+}
+
+
+
+.bos:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  transition: .7s;
+
+}
+
+.dolu:hover {
+  background-color: rgb(8, 54, 220);
+  transition: .7s;
+
+}
+
+.dolu:hover .day {
+  display: none;
+  transition: .7s;
+}
+
+.bos:hover .day {
+  display: none;
+  transition: .7s;
+}
+
+.dolu:hover .dolu-buttons {
+  transition: .7s;
+  display: flex;
+  margin: 0 !important;
+  align-items: center;
+  justify-content: center;
+}
+
+.bos:hover .bos-buttons {
+  transition: .7s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

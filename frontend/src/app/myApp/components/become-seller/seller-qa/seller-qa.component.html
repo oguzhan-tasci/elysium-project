@@ -1,0 +1,19 @@
+<div class="container my-8">
+  <div class="flex align-items-start justify-content-between p-6">
+    <div class="w-6 mx-2 flex flex-column text-start left-side">
+      <p class="font-bold text-2xl my-5">Do you have more questions?</p>
+      <p class="line-height-4 font-medium m-auto pr-5 text-justify text-gray-800">
+        We have left the frequently asked questions conveniently for you. We
+        think these answers will solve your questions, but if you cannot find an
+        answer to your question, please do not hesitate to contact us.
+      </p>
+    </div>
+    <div class="flex mx-4 flex-column w-6">
+      <p-my-accordion
+        *ngFor="let item of questions"
+        [header]="item.question"
+        [content]="item.answer"
+      ></p-my-accordion>
+    </div>
+  </div>
+</div>

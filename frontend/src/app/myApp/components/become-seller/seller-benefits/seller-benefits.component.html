@@ -1,0 +1,39 @@
+<div class="relative container my-8 p-3">
+  <div class="top-side">
+    <p class="font-bold text-center text-4xl mb-4">
+      Small changes, big impacts
+    </p>
+    <p class="w-6 text-center font-medium m-auto text-gray-800 mb-4">
+      Elysium provides a simple but structured, effective approach to open your
+      business to whole world. You will feel difference.
+    </p>
+    <img
+      class="absolute top-0 right-0"
+      src="../../../../../assets/materials/material-02.png"
+      alt=""
+    />
+    <img
+      class="absolute top-0 left-0"
+      src="../../../../../assets/materials/material-10.png"
+      alt=""
+    />
+  </div>
+  <div class="flex flex-wrap text-center">
+    <div
+      *ngFor="let item of benefits"
+      class="flex w-4 p-3 my-3 flex-column align-items-center"
+    >
+      <img
+        class="border-bottom-3 p-2 border-red-500 images"
+        [src]="item.image"
+        [alt]="item.title"
+      />
+      <div class="information">
+        <p class="font-semibold mt-3 text-lg">
+          {{ item.title }}
+        </p>
+        <p class="px-5 mt-2 text-gray-800">{{ item.subtitle }}</p>
+      </div>
+    </div>
+  </div>
+</div>

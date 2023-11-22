@@ -1,0 +1,43 @@
+<div class="w-11 shadow-2  border-round-xl h-23rem w-17rem">
+  <li
+    [routerLink]="['/product', serviceId]"
+    class="flex relative flex-column w-12 border-round-md my-3"
+  >
+    <img class="border-round-lg h-12rem" [src]="image" [alt]="title" />
+    <i class="absolute text-xl m-4 top-0 right-0 pi pi-heart"></i>
+    <div class="flex justify-content-between m-2">
+      <div class="flex align-items-center">
+        <img [src]="countryFlag" [alt]="country" />
+        <span class="text-xs font-gray-800 mx-1"
+          >{{ country }} / {{ city }}</span
+        >
+      </div>
+      <div class="stars">
+        <i class="pi pi-star text-xs"></i>
+        <span *ngIf="stars" class="mx-1 text-xs">{{ stars }}</span>
+        <span *ngIf="!stars" class="mx-1 text-xs">0</span>
+      </div>
+    </div>
+    <div class="mx-2">
+      <p class="text-gray-900 text-justify font-semibold text-sm">
+        {{ explanation }}
+      </p>
+    </div>
+    <div class="flex align-items-center px-2 pt-2 mb-2">
+      <span class="mr-1 text-sm text-gray-800">from</span>
+      <span class="text-gray-900 text-sm font-bold mx-2">{{
+        price | currency
+      }}</span>
+    </div>
+    <p-divider class="m-0"></p-divider>
+    <div class="flex align-items-center my-2 mx-2">
+      <p-avatar
+        [image]="companyLogo"
+        styleClass="mr-2"
+        shape="circle"
+      ></p-avatar>
+
+      <span class="text-sm">{{ companyName }}</span>
+    </div>
+  </li>
+</div>

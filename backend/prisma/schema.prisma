@@ -1,0 +1,76 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id          Int      @id @default(autoincrement())
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  email       String   @unique
+  hash        String
+  lastName    String
+  phoneNumber String
+  country     String
+  firstName   String
+}
+
+model Services {
+  id               Int                @id @default(autoincrement())
+  createdAt        DateTime           @default(now())
+  updatedAt        DateTime           @updatedAt
+  title            String
+  country          String
+  city             String
+  price            Int
+  stars            Int?
+  images           String[]
+  aboutService     String
+  threeSteps       String[]
+  youNeedToKnow    String[]
+  selectedDate     DateTime?
+  discountPrice    Int?
+  companiesId      Int?
+  companies        Companies?         @relation(fields: [companiesId], references: [id])
+  servicesComments ServicesComments[]
+}
+
+model Companies {
+  id              Int               @id @default(autoincrement())
+  createdAt       DateTime          @default(now())
+  updatedAt       DateTime          @updatedAt
+  name            String
+  country         String
+  city            String
+  description     String
+  languages       String[]
+  stars           Int
+  image           String
+  services        Services[]
+  companyComments CompanyComments[]
+}
+
+model ServicesComments {
+  id         Int      @id @default(autoincrement())
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+  service    Services @relation(fields: [servicesId], references: [id])
+  servicesId Int
+}
+
+model CompanyComments {
+  id          Int       @id @default(autoincrement())
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  company     Companies @relation(fields: [companiesId], references: [id])
+  companiesId Int
+}
+
+enum Role {
+  USER
+  ADMIN
+}

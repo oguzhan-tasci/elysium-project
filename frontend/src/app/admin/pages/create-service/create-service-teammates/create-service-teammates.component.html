@@ -1,0 +1,46 @@
+<div class="grid my-4 content">
+  <div class="left-side col-4">
+    <div class="flex flex-column align-items-center text-start">
+      <img
+        src="https://cdn-icons-png.flaticon.com/512/5556/5556499.png"
+        alt="add-member"
+        class="w-7rem my-3"
+      />
+      <div *ngFor="let item of inputFields" class="my-2 flex flex-column gap-2">
+        <label [htmlFor]="item.htmlFor">{{ item.label }}</label>
+        <input
+          pInputText
+          [id]="item.inputId"
+          [placeholder]="item.inputPlaceholder"
+          aria-describedby="describe"
+        />
+        <small [id]="item.smallId">{{ item.smallValue }}</small>
+      </div>
+      <p-button class="my-3" label="Add Member"></p-button>
+    </div>
+  </div>
+  <div class="right-side col-8 border-round-lg">
+    <p class="text-2xl my-3 font-semibold text-gray-900">
+      Registered teammates
+    </p>
+    <div class="flex flex-wrap gap-4 p-3 teammates">
+      <div
+        *ngFor="let item of teammates"
+        class="flex flex-column bg-gray-50 align-items-center w-10rem text-center py-3 border-round-lg shadow-1 member"
+      >
+        <p-avatar
+          [image]="item.avatar"
+          styleClass="mr-2"
+          size="xlarge"
+          shape="circle"
+        ></p-avatar>
+        <div class="bottom-side">
+          <p class="text-gray-800 mt-1 text-sm font-semibold">
+            {{ item.name }}
+          </p>
+          <p class="text-gray-700 text-sm">{{ item.title }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

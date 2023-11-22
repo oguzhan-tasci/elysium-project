@@ -1,0 +1,11 @@
+<div class="my-8 relative p-5 bg-blue-700">
+  <img
+    *ngFor="let item of icons"
+    [class]="item.iconClass"
+    [src]="item.iconSrc"
+    [alt]="item.name"
+  />
+  <div class="flex flex-column text-center w-6 m-auto">
+    <p *ngFor="let item of texts" [class]="item.styleText">{{ item.text }}</p>
+  </div>
+</div>

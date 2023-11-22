@@ -1,0 +1,24 @@
+<div class="mx-2">
+  <div class="flex flex-wrap justify-content-between">
+    <p-calendar
+      [(ngModel)]="date"
+      [inline]="true"
+      [showSeconds]="true"
+      [minDate]="minDate"
+      [maxDate]="maxDate"
+    ></p-calendar>
+    <div class="w-4 m-auto clock">
+      <div
+        class="flex flex-wrap flex-column align-items-center justify-content-center"
+      >
+        <i class="cursor-pointer text-2xl my-3 pi pi-angle-up"></i>
+        <div class="flex flex-column align-items-center times">
+          <span class="text-gray-700 text-xl my-2">17:00</span>
+          <span class="text-gray-900 text-3xl">18:00</span>
+          <span class="text-gray-700 text-xl my-2">19:00</span>
+        </div>
+        <i class="cursor-pointer text-2xl my-3 pi pi-angle-down"></i>
+      </div>
+    </div>
+  </div>
+</div>

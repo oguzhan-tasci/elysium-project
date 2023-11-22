@@ -1,0 +1,18 @@
+<div class="container-only-max-width mb-8">
+  <ul class="flex mx-4  flex-wrap">
+    <partial-service-box
+      class="mx-2 my-3 "
+      *ngFor="let service of services"
+      [serviceId]="service?.id"
+      [image]="service.images[0]"
+      [explanation]="service.title"
+      [country]="service.country"
+      [city]="service.city"
+      [stars]="service.stars"
+      [price]="service.price"
+      [companyLogo]="service.companyLogo"
+      [companyName]="service.companyName"
+      [countryFlag]="service.countryFlag"
+    ></partial-service-box>
+  </ul>
+</div>

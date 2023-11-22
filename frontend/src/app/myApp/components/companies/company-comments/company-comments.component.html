@@ -1,0 +1,12 @@
+<div class="my-5">
+  <p class="mb-5 font-bold text-2xl">Comments about company</p>
+  <partial-comment
+    *ngFor="let item of comments"
+    [name]="item.name"
+    [imageUrl]="item.image"
+    [flag]="item.flag"
+    [country]="item.country"
+    [star]="item.stars"
+    [comment]="item.comment"
+  ></partial-comment>
+</div>

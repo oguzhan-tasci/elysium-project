@@ -1,0 +1,35 @@
+<div class="container-only-max-width my-4 content">
+  <p class="text-4xl mb-5 font-bold">
+    Which of the following best describes your place?
+  </p>
+  <div class="flex flex-column content">
+    <div class="health-area">
+      <p class="font-semibold text-2xl mb-1">Health Care</p>
+      <div class="flex flex-wrap">
+        <div
+          *ngFor="let item of healthFields"
+          class="flex flex-column align-items-center border-1 border-round-lg border-gray-500 w-9rem py-3 box m-3"
+        >
+          <img class="max-w-3rem" [src]="item.icon" [alt]="item.title" />
+          <p class="font-semibold mt-2 capitalize">
+            {{ item.title }}
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="otel-area">
+      <p class="font-semibold text-2xl my-1">Place</p>
+      <div class="flex flex-wrap">
+        <div
+          *ngFor="let item of placeFields"
+          class="flex flex-column align-items-center border-1 border-round-lg border-gray-500 w-9rem py-3 box m-3"
+        >
+          <img class="max-w-3rem" [src]="item.icon" [alt]="item.title" />
+          <p class="font-semibold mt-2 capitalize">
+            {{ item.title }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,28 @@
+<div class="max-h-screen overflow-scroll p-3 my-2 border-round-lg h-screen content">
+  <p class="text-center py-4 text-gray-800">25 Eylül</p>
+  <div class="messages">
+    <div
+      *ngFor="let item of messages"
+      class="px-8 flex align-items-center mt-1 mb-7 message"
+    >
+      <p-avatar
+        [image]="item.avatarUrl"
+        styleClass="mx-3"
+        size="large"
+        shape="circle"
+      ></p-avatar>
+      <div class="border-round-lg shadow-2 p-3 mx-2 person">
+        <p class="mb-1 font-semibold">
+          {{ item.name }}
+          <span class="text-xs mx-1 text-gray-800">{{ item.minutes }}</span>
+        </p>
+        <p class="mt-1 text-gray-800">
+          {{ item.message }}
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <p-editor [style]="{ height: '100px' }"></p-editor>
+  </div>
+</div>

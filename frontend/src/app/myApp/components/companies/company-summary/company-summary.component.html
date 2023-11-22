@@ -1,0 +1,26 @@
+<div
+  class="flex flex-column px-3 py-4 bg-gray-50 mr-2 border-round-2xl shadow-2"
+>
+  <div class="mr-2 text-center flex p-2 flex-column align-items-center">
+    <p-avatar
+      image="https://logowik.com/content/uploads/images/kenvue-health-company2292.logowik.com.webp"
+      styleClass="mb-3 shadow-2"
+      size="xlarge"
+      shape="circle"
+    ></p-avatar>
+
+    <p class="text-gray-900 text-lg capitalize">Medical Park Hospital Ltd.</p>
+  </div>
+  <div class="mt-3 summary flex-column">
+    <div
+      *ngFor="let item of companyInformation"
+      class="flex justify-content-between my-2"
+    >
+      <p class="text-gray-800 text-sm">{{ item.key }}</p>
+      <div class="flex align-items-center">
+        <i [class]="item.iconClass"></i>
+        <span class="text-gray-900 mx-1">{{ item.value }}</span>
+      </div>
+    </div>
+  </div>
+</div>

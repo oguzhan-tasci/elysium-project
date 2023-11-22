@@ -1,0 +1,25 @@
+<div class="container-only-max-width mt-3">
+  <div class="py-6 px-6 flex flex-column align-items-center flex-wrap content">
+    <div class="info">
+      <p class="text-4xl mb-1 font-bold">
+        Add photos of the services you provide
+      </p>
+      <span class="text-sm text-gray-800 p-2"
+        >Photos impress potential customers. Start with at least 5 photos
+      </span>
+    </div>
+    <div class="mt-6 w-10 px-5">
+      <p-fileUpload
+        mode="basic"
+        chooseLabel="Click to download your service's photos"
+        styleClass="w-12 h-16rem border-round-xl text-900 bg-gray-200 text-xl "
+        name="demo[]"
+        chooseIcon="pi"
+        url="https://www.primefaces.org/cdn/api/upload.php"
+        accept="image/*"
+        [maxFileSize]="1000000"
+        (onUpload)="onUpload($event)"
+      ></p-fileUpload>
+    </div>
+  </div>
+</div>

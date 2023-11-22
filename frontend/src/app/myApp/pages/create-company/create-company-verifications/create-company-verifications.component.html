@@ -1,0 +1,106 @@
+<div class="container-only-width">
+  <div class="py-6 px-6 flex flex-column align-items-center flex-wrap content">
+    <div class="info">
+      <p class="text-4xl mb-1 font-bold">
+        Do some verification to keep you safe
+      </p>
+      <span class="text-sm text-gray-800 p-2"
+        >By performing these verification procedures, you increase security for
+        both yourself and your customers.
+      </span>
+    </div>
+    <div class="mt-3 w-12">
+      <div
+        *ngFor="let item of rules"
+        class="flex align-items-center my-5 py-3 px-5 shadow-1 bg-gray-100 border-round-xl rule"
+      >
+        <div class="flex flex-column flex-wrap w-9 text-justify left-side">
+          <p class="text-xl my-2 font-semibold text-gray-800">
+            {{ item.title }}
+          </p>
+          <div class="info">
+            <i [class]="item.iconClass"></i>
+            <span class="text-gray-700 mx-2">{{ item.subtitle }}</span>
+          </div>
+        </div>
+        <div class="flex justify-content-end mx-3 w-3 right-side">
+          <p-button
+            (click)="showDialog(item.id)"
+            label="Dogrula"
+            styleClass="p-button-sm mx-2"
+          ></p-button>
+          <p-dialog
+            [header]="item.dialogHeader"
+            [(visible)]="item.visible"
+            [modal]="true"
+            [style]="{ width: '30vw' }"
+            [draggable]="false"
+            [resizable]="false"
+          >
+            <div
+              *ngIf="item.dialogHeader === 'E-mail'"
+              class="flex flex-column flex-wrap gap-2"
+            >
+              <label class="text-sm font-semibold" htmlFor="email"
+                >Email</label
+              >
+              <input
+                pInputText
+                placeholder="johndoe@example.com"
+                id="email"
+                aria-describedby="email-help"
+              />
+              <small id="email-help"
+                >Enter your username to reset your password.</small
+              >
+              <p-button styleClass="my-3">Send mail</p-button>
+            </div>
+
+            <div
+              *ngIf="item.dialogHeader === 'Phone'"
+              class="flex flex-column flex-wrap gap-2"
+            >
+              <div class="flex flex-column gap-2">
+                <label class="text-sm font-semibold" htmlFor="number"
+                  >Phone number</label
+                >
+                <input
+                  pInputText
+                  id="number"
+                  aria-describedby="username-help"
+                />
+                <small id="username-help"
+                  >Enter your phone number and took verification number.</small
+                >
+              </div>
+
+              <p-button styleClass="my-3">Send message</p-button>
+            </div>
+
+            <div
+              *ngIf="item.dialogHeader === 'Tax Number'"
+              class="flex flex-column flex-wrap gap-2"
+            >
+              <div class="flex flex-column gap-2">
+                <label class="text-sm font-semibold" htmlFor="tax"
+                  >Tax Number</label
+                >
+                <input pInputText id="tax" aria-describedby="tax-help" />
+                <small id="tax-help"
+                  >Enter your 10-digit company number (takes approximately 1 day
+                  to be confirmed).</small
+                >
+              </div>
+
+              <p-button styleClass="my-3">Approve</p-button>
+            </div>
+          </p-dialog>
+          <p-button
+            label="Ertele"
+            styleClass="mx-2 p-button-outlined p-button-sm p-button-danger"
+          ></p-button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

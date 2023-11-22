@@ -1,0 +1,39 @@
+<div class="container">
+  <p class="font-bold text-3xl mb-4">Quick Review</p>
+  <div class="flex justify-content-evenly">
+    <div class="left-side">
+      <p-calendar
+        [(ngModel)]="date"
+        [inline]="true"
+        class="max-w-full"
+      ></p-calendar>
+    </div>
+    <div class="w-6 bg-gray-100 p-4 border-round-3xl">
+      <div class="flex align-items-center justify-content-between">
+        <p class="text-2xl font-semibold">Recent Sales</p>
+        <p class="text-gray-800 text-sm">View All</p>
+      </div>
+      <div class="bottom-side">
+        <div
+          *ngFor="let item of customers"
+          class="mt-3 flex align-items-center justify-content-between"
+        >
+          <div class="flex align-items-center personInformation">
+            <p-avatar
+              shape="circle"
+              size="large"
+              [image]="item.avatarUrl"
+            ></p-avatar>
+            <div class="mx-2 info">
+              <p class="text-gray-800 font-semibold">{{ item.name }}</p>
+              <p class="text-gray-700 text-sm">{{ item.minutes }}</p>
+            </div>
+          </div>
+          <div class="payoff">
+            <p class="font-semibold text-xl">{{ item.payoff | currency }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

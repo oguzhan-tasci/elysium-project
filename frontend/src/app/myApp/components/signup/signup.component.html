@@ -1,0 +1,56 @@
+<div class="card flex justify-content-center z-5">
+  <!-- <p-button
+    (click)="showDialog()"
+    icon="pi pi-external-link"
+    label="Show"
+  ></p-button> -->
+  <p-dialog
+    header="Elysium'a hosgeldiniz"
+    [modal]="true"
+    [draggable]="false"
+    [(visible)]="visible"
+    [style]="{ width: '30vw' }"
+  >
+    <div class="p-4">
+      <span class="p-float-label">
+        <input
+          class="border-round-lg w-12"
+          pInputText
+          id="username"
+          [autofocus]="true"
+          tabindex="0"
+          placeholder="johndoe@gmail.com"
+          formControlName="eposta"
+        />
+        <label htmlFor="username">E-posta</label>
+      </span>
+
+      <span class="my-5 p-float-label">
+        <p-password
+          [style]="{ width: '100%' }"
+          [inputStyle]="{ width: '100%',}"
+          tabindex="1"
+          placeholder="*************"
+          label="asdasd"
+          [toggleMask]="true"
+          formControlName="password"
+          [feedback]="false"
+        ></p-password>
+        <label for="password">Password</label>
+      </span>
+
+      <p-button label="Devam et" styleClass="mb-4 w-12 text-center"></p-button>
+
+      <p-divider styleClass="w-full" align="center">
+        <b class="text-gray-500 font-medium text-xs">Veya</b>
+      </p-divider>
+
+      <p-button
+        *ngFor="let item of socialMedias"
+        [icon]="item.iconClass"
+        [label]="item.label"
+        [styleClass]="item.styleClass"
+      ></p-button>
+    </div>
+  </p-dialog>
+</div>

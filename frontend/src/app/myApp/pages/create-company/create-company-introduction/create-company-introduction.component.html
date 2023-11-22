@@ -1,0 +1,24 @@
+<div class="flex align-items-center justify-content-around mt-2 mb-3 p-2">
+  <div class="left-side">
+    <p class="text-7xl font-bold text-gray-900 uppercase p-7 mr-2">
+      Connect to the whole world with elysium
+    </p>
+  </div>
+  <div class="flex flex-column right-side mr-3">
+    <div *ngFor="let item of articles" class="flex align-items-center my-5 box">
+      <div class="left-side mr-5">
+        <p class="text-lg font-semibold mb-2 text-gray-800">
+          {{ item.title }}
+        </p>
+        <span class="text-gray-800 text-sm text-justify">{{
+          item.subtitle
+        }}</span>
+      </div>
+      <img
+        class="p-1 max-w-6rem h-7rem"
+        [src]="item.image"
+        [alt]="item.title"
+      />
+    </div>
+  </div>
+</div>

@@ -1,0 +1,39 @@
+<p-dialog
+  header="Notifications"
+  [(visible)]="visible"
+  minimizeIcon="pi pi-right-arrow"
+  [modal]="true"
+  [draggable]="false"
+  position="top"
+  [style]="{ width: '60vw' }"
+>
+  <ul class="p-3">
+    <li class="flex flex-wrap my-4 justify-content-between">
+      <div class="flex">
+        <p-avatar
+          [image]="personAvatar"
+          size="large"
+          shape="circle"
+          class="mx-1"
+        ></p-avatar>
+        <div class="flex flex-wrap flex-column line-height-3">
+          <p class="text-black">
+            <span class="text-blue-800 font-semibold">{{ personName }}</span>
+            {{ title }}
+          </p>
+          <p class="text-sm text-gray-800">
+            {{ subtitle }}
+          </p>
+          <p class="text-xs text-gray-700">{{ time }}</p>
+        </div>
+      </div>
+      <div class="right-side">
+        <img
+          [src]="serviceImage"
+          [alt]="title"
+          class="border-round-lg max-w-5rem"
+        />
+      </div>
+    </li>
+  </ul>
+</p-dialog>

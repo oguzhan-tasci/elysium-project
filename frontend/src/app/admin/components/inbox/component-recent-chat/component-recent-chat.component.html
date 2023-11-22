@@ -1,0 +1,12 @@
+<div class="content">
+  <p class="font-semibold text-xl mb-3">Recent Chat</p>
+  <div class="flex flex-wrap align-items-center avatars">
+    <p-avatar
+      *ngFor="let item of profiles"
+      class="mx-2"
+      [image]="item.avatarUrl"
+      shape="circle"
+    >
+    </p-avatar>
+  </div>
+</div>

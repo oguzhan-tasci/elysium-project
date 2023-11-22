@@ -1,0 +1,12 @@
+<div class="container">
+  <p class="font-bold text-3xl mb-4">Resources And Tips</p>
+  <div class="flex justify-content-between align-items-center flex-wrap">
+    <div
+      *ngFor="let item of tips"
+      class="flex flex-column box bg-gray-50 shadow-2 border-round-3xl"
+    >
+      <img class="border-round-top-3xl" [src]="item.image" [alt]="item.title" />
+      <p class="text-gray-800 font-semibold py-4 px-3">{{ item.title }}</p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,61 @@
+<div class="bg-gray-200 w-full">
+  <div class="grid p-4">
+    <div class="our lg:col-4 md:col-6 sm:col-12 flex flex-column">
+      <p class="logo font-semibold text-2xl text-blue-800 mb-2">Elysium</p>
+      <p class="vision text-gray-700 text-sm pr-3">
+        We always make our customers happy by offering as many options as
+        possible.
+      </p>
+      <div class="socials flex justify-content-start mt-3">
+        <i *ngFor="let item of socialIcons" [class]="item.iconClass"></i>
+      </div>
+    </div>
+    <div
+      class="lg:col-2 md:col-6 sm:col-12 flex flex-column justify-content-start"
+    >
+      <ul>
+        <p class="font-semibold mb-2">Become Seller</p>
+        <li class="text-gray-700 text-sm my-2">
+          Do You want to open store in Elysium?
+        </li>
+        <li class="mt-4 seller-button">
+          <p-button
+            routerLink="become-seller"
+            styleClass="p-button-sm"
+            label="Become seller"
+          ></p-button>
+        </li>
+      </ul>
+    </div>
+    <div
+      class="lg:col-2 md:col-4 sm:col-12 flex flex-column justify-content-start"
+    >
+      <ul>
+        <p class="font-semibold mb-2">About Us</p>
+        <li *ngFor="let item of firstRow" class="my-1 text-gray-800 text-sm">
+          {{ item.value }}
+        </li>
+      </ul>
+    </div>
+    <div
+      class="lg:col-2 md:col-4 sm:col-12 flex flex-column justify-content-start"
+    >
+      <ul>
+        <p class="font-semibold mb-2">Company</p>
+        <li *ngFor="let item of secondRow" class="my-1 text-gray-800 text-sm">
+          {{ item.value }}
+        </li>
+      </ul>
+    </div>
+    <div
+      class="lg:col-2 md:col-4 sm:col-12 flex flex-column justify-content-start"
+    >
+      <ul>
+        <p class="font-semibold mb-2">Support</p>
+        <li *ngFor="let item of thirdRow" class="my-1 text-gray-800 text-sm">
+          {{ item.value }}
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

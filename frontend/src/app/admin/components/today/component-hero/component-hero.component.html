@@ -1,0 +1,20 @@
+<div class="dashboard">
+  <div class="w-10 p-4 m-auto flex flex-column">
+    <div class="flex align-items-center justify-content-between welcoming">
+      <p class="title font-bold text-4xl">Welcome Back, Medical Park</p>
+      <div class="flex flex-column align-items-end right-side">
+        <p class="font-semibold text-sm text-gray-800 my-2">Monday 27, 2023</p>
+        <p-dropdown class="dropdown" [options]="options" optionLabel="name"></p-dropdown>
+      </div>
+    </div>
+    <div class="mt-6 flex flex-wrap align-items-center justify-content-around">
+      <partial-dashboard-box
+        *ngFor="let item of dashboard"
+        [title]="item.title"
+        [iconClass]="item.iconClass"
+        [outcome]="item.outcome"
+        [percentage]="item.percentage"
+      ></partial-dashboard-box>
+    </div>
+  </div>
+</div>

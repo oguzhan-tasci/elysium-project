@@ -1,0 +1,265 @@
+<div class="content">
+  <p-tabView [(activeIndex)]="activeIndex">
+    <p-tabPanel header="Oncoming">
+      <p-table
+        [(selection)]="selectedProducts"
+        [paginator]="true"
+        [rowHover]="true"
+        [rows]="7"
+        [selectionPageOnly]="true"
+        [value]="oncomingReservations"
+        [tableStyle]="{ 'min-width': '50rem' }"
+      >
+        <ng-template pTemplate="header" let-columns>
+          <tr>
+            <th style="width: 4rem">
+              <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
+            </th>
+            <th>Profile</th>
+            <th>Name - Surname</th>
+            <th>Country</th>
+            <th>Status</th>
+            <th>Payment</th>
+            <th>Date</th>
+            <th>Details</th>
+          </tr>
+        </ng-template>
+        <ng-template
+          pTemplate="body"
+          let-oncomingReservations
+          let-columns="columns"
+        >
+          <tr>
+            <td>
+              <p-tableCheckbox [value]="oncomingReservations"></p-tableCheckbox>
+            </td>
+            <td class="flex align-items-center">
+              <p-avatar
+                [image]="oncomingReservations.avatarUrl"
+                styleClass="mr-2"
+                size="large"
+                shape="circle"
+              ></p-avatar>
+            </td>
+            <td>{{ oncomingReservations.name }}</td>
+            <td class="flex align-items-center">
+              <img
+                [src]="oncomingReservations.countryFlag"
+                style="width: 20px"
+              />
+              <span class="ml-1">{{ oncomingReservations.countryName }}</span>
+            </td>
+            <td>
+              <p-tag
+                [value]="oncomingReservations.status"
+                [severity]="getSeverity(oncomingReservations.status)"
+              ></p-tag>
+            </td>
+            <td>{{ oncomingReservations.price | currency : "USD" }}</td>
+            <td>
+              {{ oncomingReservations.date }}
+            </td>
+            <td>
+              <p-button styleClass="p-button-sm" label="Details"></p-button>
+            </td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </p-tabPanel>
+    <p-tabPanel header="Completed">
+      <p-table
+        [(selection)]="selectedProducts"
+        [paginator]="true"
+        [rowHover]="true"
+        [rows]="7"
+        [selectionPageOnly]="true"
+        [value]="completedReservations"
+        [tableStyle]="{ 'min-width': '50rem' }"
+      >
+        <ng-template pTemplate="header" let-columns>
+          <tr>
+            <th style="width: 4rem">
+              <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
+            </th>
+            <th>Profile</th>
+            <th>Name - Surname</th>
+            <th>Country</th>
+            <th>Status</th>
+            <th>Payment</th>
+            <th>Date</th>
+            <th>Details</th>
+          </tr>
+        </ng-template>
+        <ng-template
+          pTemplate="body"
+          let-completedReservations
+          let-columns="columns"
+        >
+          <tr>
+            <td>
+              <p-tableCheckbox
+                [value]="completedReservations"
+              ></p-tableCheckbox>
+            </td>
+            <td class="flex align-items-center">
+              <p-avatar
+                [image]="completedReservations.avatarUrl"
+                styleClass="mr-2"
+                size="large"
+                shape="circle"
+              ></p-avatar>
+            </td>
+            <td>{{ completedReservations.name }}</td>
+            <td class="flex align-items-center">
+              <img
+                [src]="completedReservations.countryFlag"
+                style="width: 20px"
+              />
+              <span class="ml-1">{{ completedReservations.countryName }}</span>
+            </td>
+            <td>
+              <p-tag
+                [value]="completedReservations.status"
+                [severity]="getSeverity(completedReservations.status)"
+              ></p-tag>
+            </td>
+            <td>{{ completedReservations.price | currency : "USD" }}</td>
+            <td>
+              {{ completedReservations.date }}
+            </td>
+            <td>
+              <p-button styleClass="p-button-sm" label="Details"></p-button>
+            </td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </p-tabPanel>
+    <p-tabPanel header="Cancelled">
+      <p-table
+        [(selection)]="selectedProducts"
+        [paginator]="true"
+        [rowHover]="true"
+        [rows]="7"
+        [selectionPageOnly]="true"
+        [value]="cancelledReservations"
+        [tableStyle]="{ 'min-width': '50rem' }"
+      >
+        <ng-template pTemplate="header" let-columns>
+          <tr>
+            <th style="width: 4rem">
+              <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
+            </th>
+            <th>Profile</th>
+            <th>Name - Surname</th>
+            <th>Country</th>
+            <th>Status</th>
+            <th>Payment</th>
+            <th>Date</th>
+            <th>Details</th>
+          </tr>
+        </ng-template>
+        <ng-template
+          pTemplate="body"
+          let-cancelledReservations
+          let-columns="columns"
+        >
+          <tr>
+            <td>
+              <p-tableCheckbox
+                [value]="cancelledReservations"
+              ></p-tableCheckbox>
+            </td>
+            <td class="flex align-items-center">
+              <p-avatar
+                [image]="cancelledReservations.avatarUrl"
+                styleClass="mr-2"
+                size="large"
+                shape="circle"
+              ></p-avatar>
+            </td>
+            <td>{{ cancelledReservations.name }}</td>
+            <td class="flex align-items-center">
+              <img
+                [src]="cancelledReservations.countryFlag"
+                style="width: 20px"
+              />
+              <span class="ml-1">{{ cancelledReservations.countryName }}</span>
+            </td>
+            <td>
+              <p-tag
+                [value]="cancelledReservations.status"
+                [severity]="getSeverity(cancelledReservations.status)"
+              ></p-tag>
+            </td>
+            <td>{{ cancelledReservations.price | currency : "USD" }}</td>
+            <td>
+              {{ cancelledReservations.date }}
+            </td>
+            <td>
+              <p-button styleClass="p-button-sm" label="Details"></p-button>
+            </td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </p-tabPanel>
+    <p-tabPanel header="All Reservations">
+      <p-table
+        [(selection)]="selectedProducts"
+        [paginator]="true"
+        [rowHover]="true"
+        [rows]="7"
+        [selectionPageOnly]="true"
+        [value]="allReservations"
+        [tableStyle]="{ 'min-width': '50rem' }"
+      >
+        <ng-template pTemplate="header" let-columns>
+          <tr>
+            <th style="width: 4rem">
+              <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
+            </th>
+            <th>Profile</th>
+            <th>Name - Surname</th>
+            <th>Country</th>
+            <th>Status</th>
+            <th>Payment</th>
+            <th>Date</th>
+            <th>Details</th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-allReservations let-columns="columns">
+          <tr>
+            <td>
+              <p-tableCheckbox [value]="allReservations"></p-tableCheckbox>
+            </td>
+            <td class="flex align-items-center">
+              <p-avatar
+                [image]="allReservations.avatarUrl"
+                styleClass="mr-2"
+                size="large"
+                shape="circle"
+              ></p-avatar>
+            </td>
+            <td>{{ allReservations.name }}</td>
+            <td class="flex align-items-center">
+              <img [src]="allReservations.countryFlag" style="width: 20px" />
+              <span class="ml-1">{{ allReservations.countryName }}</span>
+            </td>
+            <td>
+              <p-tag
+                [value]="allReservations.status"
+                [severity]="getSeverity(allReservations.status)"
+              ></p-tag>
+            </td>
+            <td>{{ allReservations.price | currency : "USD" }}</td>
+            <td>
+              {{ allReservations.date }}
+            </td>
+            <td>
+              <p-button styleClass="p-button-sm" label="Details"></p-button>
+            </td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </p-tabPanel>
+  </p-tabView>
+</div>

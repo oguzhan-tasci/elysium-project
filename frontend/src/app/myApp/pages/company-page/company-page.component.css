@@ -1,0 +1,7 @@
+@media (max-width:960px) {
+    .company-about {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

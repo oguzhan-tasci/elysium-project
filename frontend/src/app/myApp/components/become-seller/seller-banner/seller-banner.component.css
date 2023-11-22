@@ -1,0 +1,9 @@
+.banner {
+  background-image: url("../../../../../assets/deneme.png");
+  height: 82vh;
+  width: 100%;
+}
+
+.title {
+  font-weight: 800;
+}

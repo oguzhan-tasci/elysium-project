@@ -1,0 +1,54 @@
+<div
+  class="relative banner p-6 flex align-items-center justify-content-between"
+>
+  <div class="low-banner w-5 flex flex-column align-items-start">
+    <div class="relative main-title flex flex-column text-start title mb-2">
+      <span class="title font-bold text-7xl text-blue-800">Go Everywhere.</span>
+      <span class="subtitle font-bold text-5xl text-blue-800"
+        >Live For You and Your Health.</span
+      >
+    </div>
+    <div class="mb-4">
+      <p class="small-title text-justify font-medium text-gray-800">
+        Would you like to recover your time? Do good things for yourself, a fast
+        travel and a healthy life!
+      </p>
+    </div>
+    <div
+      class="fields flex justify-content-between bg-blue-600 shadow-1 align-items-end border-round-3xl p-4"
+    >
+      <div *ngFor="let values of inputValues" class="mr-3">
+        <div class="flex align-items-center mb-1">
+          <i [class]="values.iconClass"></i>
+          <span class="text-300 text-lg">{{ values.title }}</span>
+        </div>
+        <div class="input-div">
+          <span class="p-input-icon-right">
+            <input
+              type="text"
+              pInputText
+              class="input outline-none border-none text-sm font-semibold text-gray-600"
+              [placeholder]="values.inputPlaceholder"
+              [(ngModel)]="values.myValue"
+            />
+          </span>
+        </div>
+      </div>
+      <div class="search-button ml-3">
+        <p-button
+          styleClass="button p-button-rounded p-button-raised w-full"
+          label="Search"
+          routerLink="/products"
+          icon="pi pi-search"
+        ></p-button>
+      </div>
+    </div>
+  </div>
+  <div class="image-div p-6 w-6">
+    <img
+      class="w-full"
+      src="../../../../../assets/homepage/through-desert.svg"
+      alt=""
+    />
+  </div>
+</div>

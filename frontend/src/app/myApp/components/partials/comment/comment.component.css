@@ -1,0 +1,15 @@
+.comments {
+    width: 100%;
+  }
+  
+  @media (max-width: 568px) {
+  
+    .all-comment .name,
+    .country-info {
+      font-size: 14px !important;
+    }
+    .all-comment .comment p  {
+      font-size: 14px !important;
+    }
+  }
+  

@@ -1,0 +1,17 @@
+<div class="content">
+  <div class="flex flex-wrap">
+    <partial-service-box
+      class="w-4"
+      *ngFor="let service of favorites"
+      [image]="service.images[0]"
+      [explanation]="service.title"
+      [countryFlag]="service.countryFlag"
+      [country]="service.country"
+      [city]="service.city"
+      [stars]="service.stars"
+      [price]="service.price"
+      [companyLogo]="service.companyLogo"
+      [companyName]="service.companyName"
+    ></partial-service-box>
+  </div>
+</div>

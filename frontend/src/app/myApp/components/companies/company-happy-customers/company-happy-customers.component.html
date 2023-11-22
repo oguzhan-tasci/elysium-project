@@ -1,0 +1,39 @@
+<div class="my-5">
+  <p class="font-bold text-2xl mb-4">Portfolio and Our happy customers</p>
+  <div
+    *ngIf="images"
+    class="grid justify-content-start"
+    style="max-width: 800px"
+  >
+    <div
+      *ngFor="let image of images; let index = index"
+      class=" col-3"
+      key="index"
+    >
+      <img
+        [src]="image.itemImageSrc"
+        [alt]="image.alt"
+        class="max-h-8rem max-w-15rem w-12 border-round-lg"
+        style="cursor: pointer"
+        (click)="imageClick(index)"
+      />
+    </div>
+  </div>
+  <p-galleria
+    [value]="images"
+    [(visible)]="displayCustom"
+    [(activeIndex)]="activeIndex"
+    [responsiveOptions]="responsiveOptions"
+    [containerStyle]="{ 'max-width': '850px' }"
+    [numVisible]="7"
+    [circular]="true"
+    [fullScreen]="true"
+    [showItemNavigators]="true"
+    [showThumbnails]="false"
+  >
+    <ng-template pTemplate="item" let-item>
+      <img [src]="item.itemImageSrc" style="width: 100%; display: block" />
+    </ng-template>
+  </p-galleria>
+  <p-divider></p-divider>
+</div>

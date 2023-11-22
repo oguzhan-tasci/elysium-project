@@ -1,0 +1,57 @@
+<div
+  class="bg-gray-100 border-round-xl py-3 px-4 flex align-items-center justify-content-between content"
+>
+  <div class="flex align-items-center left-side">
+    <p-avatar
+      [image]="avatarUrl"
+      styleClass="mr-3"
+      size="large"
+      shape="circle"
+    ></p-avatar>
+    <div class="person-info">
+      <p class="font-semibold">{{ name }}</p>
+      <p class="text-gray-800 text-sm">{{ minutes }}</p>
+    </div>
+  </div>
+  <div class="right-side">
+    <p-button
+      (click)="showDialog()"
+      label="Detaylari Göster"
+      styleClass="p-button-outlined p-button-info p-button-sm"
+    ></p-button>
+    <p-dialog
+      position="top"
+      header="Kullanici Hakkinda bilgiler"
+      [draggable]="false"
+      [resizable]="false"
+      [modal]="true"
+      [(visible)]="visible"
+      [style]="{ width: '25vw' }"
+    >
+      <div class="dialog-content flex flex-column align-items-center p-3">
+        <p-avatar
+          [image]="avatarUrl"
+          styleClass="mr-3"
+          size="xlarge"
+          shape="circle"
+        ></p-avatar>
+        <p class="my-1 font-semibold text-xl">{{ name }}</p>
+        <p class="my-1 text-gray-800 text-sm">
+          23 Ocak'tan beri Elysium kullanıcısı
+        </p>
+        <div class="flex flex-column justify-content-between p-1">
+          <div
+            *ngFor="let item of personDetails"
+            class="mt-4 flex align-items-center"
+          >
+            <i [class]="item.iconClass"></i>
+            <div class="flex flex-column">
+              <p class="font-semibold">{{ item.title }}</p>
+              <p class="text-gray-800">{{ item.value }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </p-dialog>
+  </div>
+</div>

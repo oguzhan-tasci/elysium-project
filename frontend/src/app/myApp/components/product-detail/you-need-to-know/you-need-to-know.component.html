@@ -1,0 +1,22 @@
+<div class="container need-to-know">
+  <div class="content flex">
+    <ul>
+      <li class="my-3" *ngFor="let rules of rulesColumn1">
+        <span class="text-gray-600">{{ rules.id }}</span> -
+        <span class="text-gray-800 text-justify font-medium">{{
+          rules.rule
+        }}</span>
+        <p-divider></p-divider>
+      </li>
+    </ul>
+    <ul>
+      <li class="my-3" *ngFor="let rules of rulesColumn2">
+        <span class="text-gray-600">{{ rules.id }}</span> -
+        <span class="text-gray-800 text-justify font-medium">{{
+          rules.rule
+        }}</span>
+        <p-divider></p-divider>
+      </li>
+    </ul>
+  </div>
+</div>

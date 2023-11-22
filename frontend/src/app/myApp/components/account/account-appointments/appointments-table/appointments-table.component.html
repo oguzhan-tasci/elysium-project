@@ -1,0 +1,75 @@
+<div class="mt-5">
+  <p-table
+    [(selection)]="selectedProducts"
+    [paginator]="true"
+    [rowHover]="true"
+    [rows]="7"
+    [selectionPageOnly]="true"
+    [value]="services"
+    [tableStyle]="{ 'min-width': '50rem' }"
+  >
+    <ng-template pTemplate="header" let-columns>
+      <tr>
+        <th style="width: 4rem">
+          <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
+        </th>
+        <th>Service Taken</th>
+        <th>Country / City</th>
+        <th>Category</th>
+        <th>Price</th>
+        <th>Company</th>
+        <th>Status</th>
+        <th>Date</th>
+        <th>Details</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-services let-columns="columns">
+      <tr>
+        <td>
+          <p-tableCheckbox [value]="services"></p-tableCheckbox>
+        </td>
+        <td class="flex align-items-center">
+          <img
+            [src]="services.image"
+            alt="image"
+            style="width: 64px"
+            class="mr-2 border-round-lg"
+          />
+          <p class="text-gray-700">{{ services.name }}</p>
+        </td>
+        <td>
+          <img [src]="services.countryFlag" style="width: 20px" />
+          <span class="ml-1"> {{ services.countryName }}</span>
+        </td>
+        <td>
+          <span class="text-gray-700">{{ services.category }}</span>
+        </td>
+        <td>
+          <span class="text-gray-700">{{
+            services.price | currency : "USD"
+          }}</span>
+        </td>
+        <td>
+          <span class="text-gray-700">{{ services.companyName }}</span>
+        </td>
+        <td>
+          <p-tag
+            [value]="services.status"
+            [severity]="getSeverity(services.status)"
+          ></p-tag>
+        </td>
+        <td>
+          {{ services.date }}
+        </td>
+        <td>
+          <p-button
+            icon="pi pi-arrow-right"
+            [rounded]="true"
+            [text]="true"
+            [severity]="getSeverity(services.status)"
+          ></p-button>
+        </td>
+      </tr>
+    </ng-template>
+  </p-table>
+</div>

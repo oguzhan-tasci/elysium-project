@@ -1,0 +1,14 @@
+<div
+  class="mt-5 flex text-start flex-column px-2 py-4 bg-gray-50 mr-2 border-round-md shadow-3"
+>
+  <p class="px-1 font-semibold">Servis ile ilgili onayli belgeler</p>
+  <ul class="px-1">
+    <li
+      *ngFor="let item of approved"
+      class="flex align-items-center justify-content-start my-2"
+    >
+      <i class="pi pi-check"></i>
+      <span class="text-sm mx-2">{{ item.value }}</span>
+    </li>
+  </ul>
+</div>

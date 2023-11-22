@@ -1,0 +1,11 @@
+:host ::ng-deep {
+  .inputNumberClass input {
+    width: 30rem !important;
+    height: 30vh;
+    display: inline-block;
+    width: 100%;
+    font-size: 24px;
+    font-weight: 600;
+    margin: .3rem auto;
+  }
+}

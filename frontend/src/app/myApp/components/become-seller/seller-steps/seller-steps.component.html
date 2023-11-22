@@ -1,0 +1,20 @@
+<div class="container my-8 p-3">
+  <p class="font-bold w-7 m-auto text-center text-4xl mb-4">
+    Introduce your company and business. It's as simple as that:
+  </p>
+  <div class="flex flex-column steps">
+    <div
+      *ngFor="let item of steps; let even = even; let odd = odd"
+      [ngClass]="{ odd: odd, even: even }"
+      class="my-6 flex align-items-center"
+    >
+      <img class="w-6 h-16rem mx-5" [src]="item.image" [alt]="item.title" />
+      <div class="w-4 information">
+        <p class="font-bold mb-3 text-2xl">{{ item.title }}</p>
+        <p class="mt-2 text text-justify text-gray-800">
+          {{ item.subtitle }}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

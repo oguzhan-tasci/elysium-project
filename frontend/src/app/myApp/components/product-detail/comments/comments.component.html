@@ -1,0 +1,17 @@
+<div class="container comments">
+  <partial-comment
+    *ngFor="let item of comments"
+    [name]="item.name"
+    [imageUrl]="item.image"
+    [flag]="item.flag"
+    [country]="item.country"
+    [star]="item.stars"
+    [comment]="item.comment"
+  ></partial-comment>
+
+  <p-button
+    class="flex justify-content-end"
+    styleClass="p-button-sm p-button-outlined"
+    >See More</p-button
+  >
+</div>

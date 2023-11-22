@@ -1,0 +1,21 @@
+<div class="container-only-max-width my-2">
+  <div class="py-6 px-6 flex flex-column align-items-center flex-wrap content">
+    <div class="info">
+      <p class="text-4xl mb-1 font-bold">
+        List the rules that must be followed
+      </p>
+      <span class="text-sm text-gray-800 p-2"
+        >State the rules of your service and your team that the customer needs
+        to know.
+      </span>
+    </div>
+    <div class="my-6 w-10 px-5">
+      <p-chips
+        [(ngModel)]="values"
+        separator=","
+        styleClass="chipClass"
+        placeholder="Hint : You can split rules by using ',' or 'enter' "
+      ></p-chips>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+<div class="pb-6 relative my-2">
+  <p class="font-semibold text-2xl my-2 text-gray-900">Our Teammates</p>
+  <div class="flex flex-wrap justify-content-start gap-4 p-3 teammates">
+    <div
+      *ngFor="let item of teammates"
+      class="flex flex-column align-items-center  w-10rem text-center py-3 border-round-lg shadow-1 member"
+    >
+      <p-avatar
+        [image]="item.avatar"
+        styleClass="mr-2"
+        size="xlarge"
+        shape="circle"
+      ></p-avatar>
+      <div class="bottom-side">
+        <p class="text-gray-800 mt-1 text-sm font-semibold">{{ item.name }}</p>
+        <p class="text-gray-700 text-sm">{{ item.title }}</p>
+      </div>
+    </div>
+  </div>
+  <p-button class="absolute right-0 bottom-0 mx-3" label="Show All" [text]="true"></p-button>
+
+</div>

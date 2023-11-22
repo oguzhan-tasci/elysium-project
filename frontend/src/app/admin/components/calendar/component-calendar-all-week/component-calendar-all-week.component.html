@@ -1,0 +1,131 @@
+<div class="my-4 content">
+  <p-table
+    [value]="allDays"
+    styleClass=" p-datatable-gridlines"
+    [tableStyle]="{ 'min-width': '50rem' }"
+    [scrollable]="true"
+    scrollHeight="620px"
+  >
+    <ng-template pTemplate="header">
+      <tr>
+        <th>Saat / Gün</th>
+        <th *ngFor="let item of daysName; let i = index">
+          <div class="flex align-items-center flex-column">
+            <span>{{ daysName[i] }}</span>
+            <span> {{ dayOfMonth + i }}.{{ month }}.{{ year }}</span>
+          </div>
+        </th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-i="rowIndex" let-product>
+      <tr class="tr">
+        <td>{{ timesOfDay[i] }}- {{ timesOfDay[i + 1] }}</td>
+        <td [ngClass]="getSeverity(product.monday)">
+          <p class="day">{{ product.monday }}</p>
+          <div class="dolu-buttons">
+            <div class="openIcon">
+              <i class="pi pi-ban"></i>
+            </div>
+            <div class="infoIcon">
+              <i class="pi pi-info"></i>
+            </div>
+          </div>
+          <div class="bos-buttons">
+            <i class="openIcon pi pi-check"></i>
+          </div>
+        </td>
+        <td [ngClass]="getSeverity(product.tuesday)">
+          <p class="day">{{ product.tuesday }}</p>
+          <div class="dolu-buttons">
+            <div class="openIconIcon">
+              <i class="pi pi-ban"></i>
+            </div>
+            <div class="infoIcon">
+              <i class="pi pi-info"></i>
+            </div>
+          </div>
+          <div class="bos-buttons">
+            <i class="openIcon pi pi-check"></i>
+          </div>
+        </td>
+        <td [ngClass]="getSeverity(product.wednesday)">
+          <p class="day">{{ product.wednesday }}</p>
+          <div class="dolu-buttons">
+            <div class="openIcon">
+              <i class="pi pi-ban"></i>
+            </div>
+            <div class="infoIcon">
+              <i class="pi pi-info"></i>
+            </div>
+          </div>
+          <div class="bos-buttons">
+            <i class="openIcon pi pi-check"></i>
+          </div>
+        </td>
+        <td [ngClass]="getSeverity(product.thursday)">
+          <p class="day">{{ product.thursday }}</p>
+          <div class="dolu-buttons">
+            <div class="openIcon">
+              <i class="pi pi-ban"></i>
+            </div>
+            <div class="infoIcon">
+              <i class="pi pi-info"></i>
+            </div>
+          </div>
+          <div class="bos-buttons">
+            <i class="openIcon pi pi-check"></i>
+          </div>
+        </td>
+        <td [ngClass]="getSeverity(product.friday)">
+          <p class="day">{{ product.friday }}</p>
+          <div class="dolu-buttons">
+            <div class="openIcon">
+              <i class="pi pi-ban"></i>
+            </div>
+            <div class="infoIcon">
+              <i class="pi pi-info"></i>
+            </div>
+          </div>
+          <div class="bos-buttons">
+            <i class="openIcon pi pi-check"></i>
+          </div>
+        </td>
+        <td [ngClass]="getSeverity(product.saturday)">
+          <p class="day">{{ product.saturday }}</p>
+          <div class="dolu-buttons">
+            <div class="openIcon">
+              <i class="pi pi-ban"></i>
+            </div>
+            <div class="infoIcon">
+              <i class="pi pi-info"></i>
+            </div>
+          </div>
+          <div class="bos-buttons">
+            <i class="openIcon pi pi-check"></i>
+          </div>
+        </td>
+        <td [ngClass]="getSeverity(product.sunday)">
+          <p class="day">{{ product.sunday }}</p>
+          <div class="dolu-buttons">
+            <div class="openIcon">
+              <i class="pi pi-ban"></i>
+            </div>
+            <div class="infoIcon">
+              <i class="pi pi-info"></i>
+            </div>
+          </div>
+          <div class="bos-buttons">
+            <i class="openIcon pi pi-check"></i>
+          </div>
+        </td>
+      </tr>
+    </ng-template>
+
+    <ng-template pTemplate="summary">
+      <p class="text-center">
+        Takvim ile ilgili herhangi bir sorununuzda
+        <a routerLink="/">bizimle iletişime geçebilirsiniz.</a>
+      </p>
+    </ng-template>
+  </p-table>
+</div>

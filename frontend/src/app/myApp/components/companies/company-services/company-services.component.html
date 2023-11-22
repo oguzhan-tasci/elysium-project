@@ -1,0 +1,16 @@
+<div class="my-5">
+  <p class="font-bold text-2xl mb-2">Services of Company</p>
+  <ul class="p-0 flex flex-wrap">
+    <partial-service-box
+      class="w-4"
+      *ngFor="let service of companyService"
+      [image]="service.images[0]"
+      [explanation]="service.title"
+      [country]="service.country"
+      [city]="service.city"
+      [stars]="service.stars"
+      [price]="service.price"
+    ></partial-service-box>
+  </ul>
+  <p-divider></p-divider>
+</div>

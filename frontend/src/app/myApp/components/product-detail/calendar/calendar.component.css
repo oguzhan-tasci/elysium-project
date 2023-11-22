@@ -1,0 +1,26 @@
+.availableTrue {
+  background-color: #1d4bd4;
+  color: white;
+}
+
+.availableFalse {
+  background-color: #a3a3a3;
+  color: #fff;
+}
+
+@media (max-width: 658px) {
+  .container {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+
+  .content {
+    flex-direction: column;
+  }
+
+  .card {
+    width: 100% !important;
+    margin: .5rem auto !important;
+  }
+
+}

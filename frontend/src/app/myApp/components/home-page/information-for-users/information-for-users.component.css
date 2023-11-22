@@ -1,0 +1,21 @@
+.odd {
+  flex-flow: row-reverse;
+  padding: 0 3rem;
+}
+
+@media (max-width : 768px) {
+  .container .single-info {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .container .single-info .single-exp {
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important
+  }
+
+  .container .single-info .single-exp .info-title {
+    margin: 0 .2rem !important;
+  }
+}

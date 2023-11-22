@@ -1,0 +1,19 @@
+<div class="my-5">
+  <div class="sections">
+    <div *ngFor="let item of fields" class="flex flex-column my-4">
+      <div class="flex align-items-center justify-content-between my-3 section">
+        <div class="flex flex-column left-side">
+          <span class="text-sm text-gray-800">{{ item.inputTitle }}</span>
+          <span class="text-sm text-gray-700">{{ item.inputValue }}</span>
+        </div>
+        <p-button
+          label="Görüntüle"
+          [text]="true"
+          size="small"
+          severity="info"
+        ></p-button>
+      </div>
+      <p-divider></p-divider>
+    </div>
+  </div>
+</div>

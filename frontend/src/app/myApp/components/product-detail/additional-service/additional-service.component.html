@@ -1,0 +1,12 @@
+<div class="shadow-1mx-3 px-3 py-3 content">
+  <p class="font-semibold text-gray-900 text-2xl my-2">
+    What does this place provide for you?
+  </p>
+  <div class="flex flex-wrap align-items-center">
+    <div *ngFor="let item of amenities" class="flex align-items-center box m-2">
+      <i [class]="item.iconClass"></i>
+      <span class="text-gray-800 mx-2">{{ item.nameValue }}</span>
+    </div>
+  </div>
+</div>
+<p-divider></p-divider>

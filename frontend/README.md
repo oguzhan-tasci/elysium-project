@@ -25,3 +25,55 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+<div class="my-4 content">
+  <p-table
+    [value]="allDays"
+    styleClass=" p-datatable-gridlines"
+    [tableStyle]="{ 'min-width': '50rem' }"
+    [scrollable]="true"
+    scrollHeight="620px"
+  >
+    <ng-template pTemplate="header">
+      <tr>
+        <th>Saat / Gün</th>
+        <th *ngFor="let item of daysName; let i = index">
+          <div class="flex align-items-center flex-column">
+            <span>{{ daysName[i] }}</span>
+            <span> {{ dayOfMonth + i }}.{{ month }}.{{ year }}</span>
+          </div>
+        </th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-i="rowIndex" let-product>
+      <tr class="tr">
+        <td>{{ timesOfDay[i] }}- {{ timesOfDay[i + 1] }}</td>
+        <td [ngClass]="getSeverity(product.monday)">
+          {{ product.monday }}
+        </td>
+        <td [ngClass]="getSeverity(product.tuesday)">
+          {{ product.tuesday }}
+        </td>
+        <td [ngClass]="getSeverity(product.wednesday)">
+          {{ product.wednesday }}
+        </td>
+        <td [ngClass]="getSeverity(product.thursday)">
+          {{ product.thursday }}
+        </td>
+        <td [ngClass]="getSeverity(product.friday)">{{ product.friday }}</td>
+        <td [ngClass]="getSeverity(product.saturday)">
+          {{ product.saturday }}
+        </td>
+        <td [ngClass]="getSeverity(product.sunday)">{{ product.sunday }}</td>
+      </tr>
+    </ng-template>
+
+    <ng-template pTemplate="summary">
+      <p class="text-center">
+        Takvim ile ilgili herhangi bir sorununuzda
+        <a routerLink="/">bizimle iletişime geçebilirsiniz.</a>
+      </p>
+    </ng-template>
+
+  </p-table>
+</div>

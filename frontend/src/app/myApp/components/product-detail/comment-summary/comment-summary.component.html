@@ -1,0 +1,43 @@
+<div class="shadow-1 mt-7 p-4 border-round-xl">
+  <p class="text-gray-900 text-2xl font-semibold">Summary of comments</p>
+  <div class="my-2">
+    <i class="pi pi-star"></i>
+    <span class="text-gray-800 mx-1 font-semibold">4.87 (219)</span>
+  </div>
+  <div
+    class="comment-summary flex align-items-center justify-content-between p-2"
+  >
+    <div class="left-side line-height-4 w-6">
+      <ul class="px-3">
+        <li
+          class="flex align-items-center my-2 justify-content-between"
+          *ngFor="let item of firstColumn"
+        >
+          <p class="text-sm font-semibold">{{ item.title }}</p>
+          <p-progressBar
+            class="bar"
+            [style]="{ width: '18vw', height: '2vh', 'font-size': '12px' }"
+            [value]="item.value"
+            [color]="item.value > 50 ? '' : 'crimson'"
+          ></p-progressBar>
+        </li>
+      </ul>
+    </div>
+    <div class="right-side line-height-4 w-6">
+      <ul class="px-3">
+        <li
+          class="flex align-items-center my-2 justify-content-between"
+          *ngFor="let item of secondColumn"
+        >
+          <p class="text-sm font-semibold">{{ item.title }}</p>
+          <p-progressBar
+            class="bar"
+            [style]="{ width: '18vw', height: '2vh', 'font-size': '12px' }"
+            [value]="item.value"
+            [color]="item.value > 50 ? '' : 'crimson'"
+          ></p-progressBar>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

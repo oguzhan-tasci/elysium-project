@@ -1,0 +1,23 @@
+<div class="bg-gray-100 p-8 my-8">
+  <div class="line-height-4 quotes text-center w-6 m-auto">
+    <div class="quote">
+      <img [src]="seller.quoteImage" [alt]="seller.quote" />
+      <span class="font-semibold text-lg mx-3 text-gray-800">{{
+        seller.quote
+      }}</span>
+      <img class="rotate-180" [src]="seller.quoteImage" [alt]="seller.quote" />
+    </div>
+    <div class="mt-5 flex align-items-center justify-content-center avatar">
+      <p-avatar
+        styleClass="mx-4"
+        size="xlarge"
+        shape="circle"
+        [image]="seller.avatarUrl"
+      ></p-avatar>
+      <div class="person-info">
+        <p class="font-bold">{{ seller.personName }}</p>
+        <p class="font-semibold">{{ seller.personCompany }}</p>
+      </div>
+    </div>
+  </div>
+</div>

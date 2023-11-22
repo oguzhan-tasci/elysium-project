@@ -1,0 +1,84 @@
+<div class="">
+  <div
+    class="flex align-items-center p-4 justify-content-between mini-container m-auto"
+  >
+    <p class="font-bold text-3xl font-italic text-blue-600">Elsyium</p>
+    <ul class="flex align-items-center">
+      <li class="mx-1">
+        <a class="text-gray-800 text-sm font-semibold" href="/hosting"
+          >Business Mode</a
+        >
+      </li>
+      <li class="mx-1">
+        <p-button
+          icon="pi pi-globe"
+          [rounded]="true"
+          [text]="true"
+          severity="secondary "
+          (click)="showDialog()"
+        ></p-button>
+        <p-dialog
+          header="Elsyium"
+          [(visible)]="visible"
+          [modal]="true"
+          [style]="{ width: '60vw', height: '90vh' }"
+          [draggable]="false"
+          [resizable]="false"
+        >
+          <p-tabView>
+            <p-tabPanel header="Language And Location">
+              <p class="font-bold text-xl text-gray-800 mb-3">
+                Choose a region and language
+              </p>
+              <div
+                class="flex flex-wrap align-items-center justify-content-start"
+              >
+                <div
+                  *ngFor="let item of languagesAndRegions"
+                  class="shadow-1 border-round-lg h-full w-11rem mx-3 my-2"
+                >
+                  <div class="flex flex-column my-2 mx-3 content">
+                    <span class="text-sm text-gray-800">{{ item.region }}</span>
+                    <span class="text-xs text-justify text-gray-700">{{
+                      item.language
+                    }}</span>
+                  </div>
+                </div>
+              </div>
+            </p-tabPanel>
+            <p-tabPanel header="Currency">
+              <p class="font-bold text-xl text-gray-800 mb-3">
+                Choose a type of currency
+              </p>
+              <div
+                class="flex flex-wrap align-items-center justify-content-start"
+              >
+                <div
+                  *ngFor="let item of currency"
+                  class="shadow-1 border-round-lg h-full w-11rem mx-3 my-2"
+                >
+                  <div class="flex flex-column my-2 mx-3 content">
+                    <span class="text-sm text-gray-800">{{
+                      item.currencyName
+                    }}</span>
+                    <span class="text-xs text-justify text-gray-700"
+                      >{{ item.currencyCode }} - {{ item.currencySign }}</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </p-tabPanel>
+          </p-tabView>
+        </p-dialog>
+      </li>
+      <li class="mx-1">
+        <p-avatar
+          image="https://cdn-icons-png.flaticon.com/512/5556/5556512.png"
+          pBadge
+          value="4"
+          severity="danger"
+        ></p-avatar>
+      </li>
+    </ul>
+  </div>
+</div>
