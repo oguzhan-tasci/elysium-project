@@ -18,4 +18,10 @@ export class ServiceBoxComponent {
   @Input() countryFlag: string;
   @Input() companyLogo: string;
   @Input() companyName: string;
+  flagCode: string;
+
+  constructor() {
+    console.log(this.countryFlag);
+    
+  }
 }

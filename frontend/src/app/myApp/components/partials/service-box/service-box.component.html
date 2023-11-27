@@ -1,4 +1,4 @@
-<div class="w-11 shadow-2  border-round-xl h-23rem w-17rem">
+<div class="w-11 shadow-2 border-round-xl h-23rem w-17rem">
   <li
     [routerLink]="['/product', serviceId]"
     class="flex relative flex-column w-12 border-round-md my-3"
@@ -7,7 +7,10 @@
     <i class="absolute text-xl m-4 top-0 right-0 pi pi-heart"></i>
     <div class="flex justify-content-between m-2">
       <div class="flex align-items-center">
-        <img [src]="countryFlag" [alt]="country" />
+        <img
+          [src]="'https://flagsapi.com/' + countryFlag + '/flat/24.png'"
+          [alt]="country"
+        />
         <span class="text-xs font-gray-800 mx-1"
           >{{ country }} / {{ city }}</span
         >

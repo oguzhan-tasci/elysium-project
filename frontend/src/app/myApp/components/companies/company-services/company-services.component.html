@@ -3,13 +3,16 @@
   <ul class="p-0 flex flex-wrap">
     <partial-service-box
       class="w-4"
-      *ngFor="let service of companyService"
-      [image]="service.images[0]"
-      [explanation]="service.title"
-      [country]="service.country"
-      [city]="service.city"
-      [stars]="service.stars"
-      [price]="service.price"
+      *ngFor="let company of aboutCompany"
+      [image]="company?.images[0]"
+      [explanation]="company?.title"
+      [country]="company?.country"
+      [city]="company?.city"
+      [stars]="company?.stars"
+      [price]="company?.price"
+      [countryFlag]="company?.countryFlag"
+      [companyName]="company?.companyName"
+      [companyLogo]="company?.companyLogo"
     ></partial-service-box>
   </ul>
   <p-divider></p-divider>
