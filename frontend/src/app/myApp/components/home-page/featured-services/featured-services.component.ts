@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ServiceBox } from 'src/app/myApp/models/ServiceBox';
-import { HealthService } from 'src/app/myApp/services/allServices/health/health.service';
+import { HealthService } from 'src/app/myApp/services/allServices/products/health.service';
+import { FeaturedService } from 'src/app/myApp/services/allServices/homepage/featured.service';
 
 @Component({
   selector: 'hp-featured-services',
@@ -10,10 +11,10 @@ import { HealthService } from 'src/app/myApp/services/allServices/health/health.
 export class FeaturedServicesComponent {
   services: any;
 
-  constructor(private healthService: HealthService) {}
+  constructor(private featuredServices: FeaturedService) {}
 
   getServices() {
-    this.healthService.getAllServices().subscribe((data) => {
+    this.featuredServices.getFeaturedServices().subscribe((data) => {
       this.services = data;
     });
   }

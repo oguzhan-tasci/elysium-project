@@ -55,7 +55,7 @@ const routes: Routes = [
       { path: 'companies', component: CompanyPageComponent },
       { path: 'become-seller', component: BecomeSellerComponent },
       { path: 'products', component: ProductsPageComponent },
-      { path: 'product/:id', component: ProductDetailComponent },
+      { path: 'products/:id', component: ProductDetailComponent },
     ],
   },
 

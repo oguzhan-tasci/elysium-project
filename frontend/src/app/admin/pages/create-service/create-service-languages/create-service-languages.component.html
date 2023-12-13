@@ -12,7 +12,8 @@
     <div class="mt-6 w-10 px-5">
       <p-multiSelect
         [options]="languages"
-        [(ngModel)]="selectedLanguage"
+        [(ngModel)]="selectedLanguages"
+        (ngModelChange)="saveLanguages($event)"
         defaultLabel="Select a language(s)"
         optionLabel="name"
         styleClass="w-full"

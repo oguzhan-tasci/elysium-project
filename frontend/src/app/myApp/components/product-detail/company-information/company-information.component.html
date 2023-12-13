@@ -10,14 +10,16 @@
           styleClass="mr-2"
           size="xlarge"
           shape="circle"
-          image="https://cdn.logojoy.com/wp-content/uploads/2018/05/01104800/1050.png"
+          [image]="companyLogo"
         ></p-avatar>
       </div>
       <div class="details mx-2">
-        <p class="text-lg">Medical Park Hospital</p>
+        <p class="text-lg">{{ companyName }}</p>
         <div class="flex align-items-center">
-          <img src="https://flagsapi.com/TR/flat/32.png" alt="" />
-          <span class="text-gray-800 text-md mx-1">Istanbul,Turkey</span>
+          <img src="https://flagsapi.com/{{companyCountryFlag}}/flat/32.png" alt="" />
+          <span class="text-gray-800 text-md mx-1"
+            >{{ companyCity }} / {{ companyCountry }}</span
+          >
         </div>
         <div class="text-gray-800">
           <i class="pi pi-star"></i>
@@ -25,9 +27,7 @@
         </div>
       </div>
     </div>
-    <div
-      class="flex flex-column p-3 m-auto align-items-center my-4"
-    >
+    <div class="flex flex-column p-3 m-auto align-items-center my-4">
       <div class="image flex align-items-center">
         <label class="tex-lg font-semibold mx-4" for="demo">Image</label>
         <p-button label="Choose" [outlined]="true"></p-button>
@@ -35,7 +35,6 @@
       <div class="video flex align-items-center mt-3">
         <label class="tex-lg font-semibold mx-4" for="demo">Video</label>
         <p-button label="Choose" [outlined]="true"></p-button>
-
       </div>
     </div>
     <div class="accept-button flex flex-column text-center">

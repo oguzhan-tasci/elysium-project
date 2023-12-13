@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'pd-explanation-of-service',
@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./explanation-of-service.component.css'],
 })
 export class ExplanationOfServiceComponent {
+  @Input() explanation: string;
   visible: boolean = false;
 
   showDialog() {

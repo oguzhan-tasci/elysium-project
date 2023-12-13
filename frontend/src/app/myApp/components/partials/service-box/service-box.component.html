@@ -1,6 +1,6 @@
-<div class="w-11 shadow-2 border-round-xl h-23rem w-17rem">
+<div class="w-11 shadow-2 border-round-xl h-23rem w-17rem cursor-pointer">
   <li
-    [routerLink]="['/product', serviceId]"
+    [routerLink]="['products', '3']"
     class="flex relative flex-column w-12 border-round-md my-3"
   >
     <img class="border-round-lg h-12rem" [src]="image" [alt]="title" />
@@ -23,7 +23,7 @@
     </div>
     <div class="mx-2">
       <p class="text-gray-900 text-justify font-semibold text-sm">
-        {{ explanation }}
+        {{ title }}
       </p>
     </div>
     <div class="flex align-items-center px-2 pt-2 mb-2">

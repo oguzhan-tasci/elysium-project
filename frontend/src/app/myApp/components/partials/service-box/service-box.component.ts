@@ -6,22 +6,14 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./service-box.component.css'],
 })
 export class ServiceBoxComponent {
-  @Input() serviceId: number;
-  @Input() sectionTitle: string;
+  @Input() id: number;
   @Input() image: string;
   @Input() country: string;
   @Input() city: string;
   @Input() stars: string;
   @Input() title: string;
-  @Input() explanation: string;
   @Input() price?: string;
   @Input() countryFlag: string;
   @Input() companyLogo: string;
   @Input() companyName: string;
-  flagCode: string;
-
-  constructor() {
-    console.log(this.countryFlag);
-    
-  }
 }

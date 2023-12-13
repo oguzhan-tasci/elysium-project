@@ -1,6 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { HealthService } from 'src/app/myApp/services/allServices/health/health.service';
-import { sample_services } from '../../../../../data';
+import { HealthService } from 'src/app/myApp/services/allServices/products/health.service';
 
 @Component({
   selector: 'p-services',
@@ -12,10 +11,9 @@ export class ListOfServicesComponent {
   constructor(private healthService: HealthService) {}
 
   getServices() {
-    this.services = sample_services;
-    // this.healthService.getAllServices().subscribe((data) => {
-    //   this.services = data;
-    // });
+    this.healthService.getAllServices().subscribe((data) => {
+      this.services = data;
+    });
   }
   ngOnInit() {
     this.getServices();

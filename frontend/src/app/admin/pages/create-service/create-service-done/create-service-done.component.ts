@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { HealthService } from 'src/app/myApp/services/allServices/health/health.service';
+import { HealthService } from 'src/app/myApp/services/allServices/products/health.service';
 
 @Component({
   selector: 'create-service-done',

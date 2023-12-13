@@ -2,50 +2,19 @@
   <div class="left-side flex flex-column align-items-start">
     <div class="mb-3 w-10 ml-6 flex flex-column line-height-3 informations">
       <p class="title text-2xl font-medium">
-        We transplant your hair in a professional way
+        {{title}}
       </p>
       <div class="comments text-gray-800">
         <i class="pi pi-star"></i>
-        <span class="text-md mx-1">4,87 (79 assessments)</span>
+        <span class="text-md mx-1">{{stars}} (79 assessments)</span>
       </div>
       <div class="location flex align-items-center">
         <img src="https://flagsapi.com/TR/flat/32.png" alt="" />
-        <span class="text-gray-800 mx-1">Istanbul,Turkey</span>
+        <span class="text-gray-800 mx-1">{{country}} {{city}}</span>
       </div>
     </div>
     <div class="flex">
-      <p-carousel
-        [value]="images"
-        [numVisible]="1"
-        [numScroll]="3"
-        [circular]="false"
-      >
-        <ng-template
-          *ngFor="let product of images"
-          let-product
-          pTemplate="item"
-        >
-          <div class="border-1 surface-border border-round my-2">
-            <div class="">
-              <img
-                [src]="product.itemImageSrc"
-                [alt]="product.title"
-                class="w-12"
-              />
-            </div>
-          </div>
-        </ng-template>
-      </p-carousel>
-      <div
-        class="flex flex-column align-items-center justify-content-around flex-wrap my-1"
-      >
-        <img
-          class="w-12 border-round-xl"
-          *ngFor="let item of thumbnailImages"
-          [src]="item.thumbnail"
-          [alt]="item.alt"
-        />
-      </div>
+      <img [src]="images" style="max-width: 700px;" [alt]="title">
     </div>
   </div>
 </div>

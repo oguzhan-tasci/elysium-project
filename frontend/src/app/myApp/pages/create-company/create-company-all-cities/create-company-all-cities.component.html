@@ -13,6 +13,7 @@
       <p-multiSelect
         [options]="cities"
         [(ngModel)]="selectedCities"
+        (ngModelChange)="activeCities($event)"
         defaultLabel="Select a City"
         optionLabel="name"
         styleClass="w-full"

@@ -6,30 +6,39 @@ import { Component } from '@angular/core';
   styleUrls: ['./create-service-detail-adress.component.css'],
 })
 export class CreateServiceDetailAdressComponent {
-  placeholders = [];
+  placeholders = [
+    {
+      id: 1,
+      placeholderValue: 'City',
+      ngModelValue: 'city',
+    },
+    {
+      id: 2,
+      placeholderValue: 'Town/District',
+      ngModelValue: 'town',
+    },
+    {
+      id: 3,
+      placeholderValue: 'Street/Avenue',
+      ngModelValue: 'street',
+    },
+    {
+      id: 4,
+      placeholderValue: 'Housing/Floor/Building etc (optional)',
+      ngModelValue: 'building',
+    },
+    {
+      id: 5,
+      placeholderValue: 'Post code (optional)',
+      ngModelValue: 'postCode',
+    },
+  ];
 
-  ngOnInit() {
-    this.placeholders = [
-      {
-        id: 1,
-        placeholderValue: 'Town/District',
-      },
-      {
-        id: 2,
-        placeholderValue: 'Street/Avenue',
-      },
-      {
-        id: 3,
-        placeholderValue: 'Housing/Floor/Building etc (optional)',
-      },
-      {
-        id: 4,
-        placeholderValue: 'Post code (optional)',
-      },
-      {
-        id: 5,
-        placeholderValue: 'City',
-      },
-    ];
-  }
+  city: string;
+  town: string;
+  street: string;
+  building: string;
+  postCode: string;
+  
+  ngOnInit() {}
 }

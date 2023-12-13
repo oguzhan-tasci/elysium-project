@@ -13,10 +13,11 @@
         placeholder="Ex: John Doe Hospital"
         type="text"
         maxlength="25"
+        [(ngModel)]="title"
+        (ngModelChange)="saveTitle($event)"
         pInputText
-        formControlName="text"
       />
-      <small class="text-gray-800">0/25</small>
+      <small class="text-gray-800">{{ title?.length }}/25</small>
     </div>
   </div>
 </div>

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { MainService } from 'src/app/myApp/services/main.service';
 
 @Component({
@@ -7,12 +7,14 @@ import { MainService } from 'src/app/myApp/services/main.service';
   styleUrls: ['./upper-left-side.component.css'],
 })
 export class UpperLeftSideComponent {
-  images: any[] | undefined;
-  thumbnailImages: any[] | undefined;
+  @Input() title:string;
+  @Input() country : string;
+  @Input() city : string;
+  @Input() stars : number;
+  @Input() images : string[];
 
   constructor(private imageService: MainService) {}
 
   ngOnInit() {
-    this.images = this.imageService.getAllImages();
   }
 }

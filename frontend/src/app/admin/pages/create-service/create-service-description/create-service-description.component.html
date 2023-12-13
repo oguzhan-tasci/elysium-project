@@ -16,9 +16,10 @@
         pInputTextarea
         class="p-3 text-gray-800 text-lg font-semibold border-round-lg w-full"
         maxlength="500"
-        formControlName="text"
+        [(ngModel)]="description"
+        (ngModelChange)="saveDescription($event)"
       ></textarea>
-      <small class="text-gray-800">0/500</small>
+      <small class="text-gray-800">{{ description.length }} /500</small>
     </div>
   </div>
 </div>

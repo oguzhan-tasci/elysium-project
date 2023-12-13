@@ -7,10 +7,7 @@ export class ServiceBox {
   discountPrice?: number;
   stars?: number;
   images!: string[];
-  explanation!: string;
-  youNeedToKnow!: string[];
-  countryFlag : string;
-  companyLogo : string;
-  companyName : string;
-  companiesId?: number;
+  countryFlag: string;
+  companyLogo: string;
+  companyName: string;
 }

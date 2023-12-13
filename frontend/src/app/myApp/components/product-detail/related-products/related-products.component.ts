@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ServiceBox } from 'src/app/myApp/models/ServiceBox';
-import { HealthService } from 'src/app/myApp/services/allServices/health/health.service';
+import { HealthService } from 'src/app/myApp/services/allServices/products/health.service';
 
 @Component({
   selector: 'pd-related-products',

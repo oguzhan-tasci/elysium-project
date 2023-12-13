@@ -6,5 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./create-service-rules.component.css'],
 })
 export class CreateServiceRulesComponent {
-  values: any;
+  values: string[];
+
+  ngOnInit() {
+    this.saveRules(this.values);
+  }
+  saveRules(event: any) {
+    let rules = [];
+    if (event == undefined) {
+      throw Error('At least you have to provide 1 rule');
+    } else {
+      window.localStorage.setItem('service-rules', event);
+    }
+  }
 }

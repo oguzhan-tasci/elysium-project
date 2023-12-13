@@ -13,6 +13,7 @@
       <p-dropdown
         [options]="countries"
         [(ngModel)]="selectedCountry"
+        (ngModelChange)="writeCountry($event)"
         optionLabel="name"
         [filter]="true"
         filterBy="name"

@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class CreateServiceLanguagesComponent {
   languages!: any;
 
-  selectedLanguage!: any;
+  selectedLanguages!: any;
 
   constructor() {
     this.languages = [
@@ -18,5 +18,24 @@ export class CreateServiceLanguagesComponent {
       { name: 'Spanish', code: 'SP' },
       { name: 'French', code: 'FR' },
     ];
+  }
+
+  ngOnInit() {
+    this.saveLanguages(this.selectedLanguages);
+  }
+
+  saveLanguages(event: any) {
+    let temporaryLanguages = [];
+    if (event == undefined) {
+      throw Error("It's required");
+    } else {
+      for (let i = 0; i < event.length; i++) {
+        temporaryLanguages.push(event[i].name);
+      }
+      window.localStorage.setItem(
+        'service-languages',
+        JSON.stringify(temporaryLanguages)
+      );
+    }
   }
 }

@@ -6,12 +6,17 @@
         alt="add-member"
         class="w-7rem my-3"
       />
-      <div *ngFor="let item of inputFields" class="my-2 flex flex-column gap-2">
+      <div
+        *ngFor="let item of inputFields; let i = index"
+        class="my-2 flex flex-column gap-2"
+      >
         <label [htmlFor]="item.htmlFor">{{ item.label }}</label>
         <input
           pInputText
           [id]="item.inputId"
           [placeholder]="item.inputPlaceholder"
+          [(ngModel)]="item.ngModelValue"
+          (ngModelChange)="saveMember($event, i)"
           aria-describedby="describe"
         />
         <small [id]="item.smallId">{{ item.smallValue }}</small>

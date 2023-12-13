@@ -14,9 +14,12 @@
         type="text"
         maxlength="40"
         pInputText
-        formControlName="text"
+        (ngModelChange)="saveTitle()"
+        [(ngModel)]="title"
       />
-      <small class="text-gray-800">0/40</small>
+      <div>
+        <small class="text-gray-800">{{ title.length }} /40</small>
+      </div>
     </div>
   </div>
 </div>

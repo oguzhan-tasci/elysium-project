@@ -12,6 +12,7 @@
     <div class="my-6 w-10 px-5">
       <p-chips
         [(ngModel)]="values"
+        (ngModelChange)="saveRules($event)"
         separator=","
         styleClass="chipClass"
         placeholder="Hint : You can split rules by using ',' or 'enter' "

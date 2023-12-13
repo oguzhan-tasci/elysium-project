@@ -9,12 +9,12 @@
     </div>
     <div class="mt-6 w-10 px-5">
       <input
-        *ngFor="let item of placeholders"
+        *ngFor="let item of placeholders; let i = index"
         [placeholder]="item.placeholderValue"
+        [(ngModel)]="item.ngModelValue"
         class="my-2 w-full"
         type="text"
         pInputText
-        formControlName="text"
       />
     </div>
   </div>

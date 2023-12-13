@@ -1,7 +1,21 @@
 <div class="container m-auto grid">
-  <pd-upper-left-side class="lg:col-8 sm:col-12"></pd-upper-left-side>
-  <pd-company-information class="lg:col-4"></pd-company-information>
+  <pd-upper-left-side
+    [city]="city"
+    [country]="country"
+    [images]="images"
+    [title]="title"
+    class="lg:col-8 sm:col-12"
+  ></pd-upper-left-side>
+  <pd-company-information
+    [companyName]="companyName"
+    [companyCity]="companyCity"
+    [companyCountry]="companyCountry"
+    [companyCountryFlag]="companyCountryFlag"
+    [companyLogo]="companyLogo"
+    class="lg:col-4"
+  ></pd-company-information>
   <pd-explanation-of-service
+  [explanation]="about"
     class="lg:col-8 sm:col-12"
   ></pd-explanation-of-service>
   <pd-additional-service class="lg:col-8 sm:col-12"></pd-additional-service>
